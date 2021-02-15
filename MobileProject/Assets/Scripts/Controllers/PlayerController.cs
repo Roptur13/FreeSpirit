@@ -1,18 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
+//Script de Noé
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private NavMeshAgent navAgent;
+
     void Start()
     {
-        
+        navAgent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        if(Input.GetButtonDown("Fire1"))
+        {
+            navAgent.destination = Input.mousePosition;
+        }
     }
 }
