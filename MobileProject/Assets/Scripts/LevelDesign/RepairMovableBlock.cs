@@ -19,13 +19,18 @@ public class RepairMovableBlock : MonoBehaviour
 
     public bool isBroken;
 
+    public GameObject movableBlock;
     private SpriteRenderer spriteRenderer;
+
+    public GameObject player;
+    private PlayerController playerController;
 
 
     void Start()
     {
         repairButton.gameObject.SetActive(false);
-        spriteRenderer = GetComponentInParent<SpriteRenderer>();
+        spriteRenderer = movableBlock.GetComponent<SpriteRenderer>();
+        playerController = player.GetComponent<PlayerController>();        
     }
 
     
@@ -44,10 +49,11 @@ public class RepairMovableBlock : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isBroken == true)
+        if (isBroken == true && playerController.color == PlayerController.characterColor.Blue)
         {
             repairButton.gameObject.SetActive(true);
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -56,12 +62,16 @@ public class RepairMovableBlock : MonoBehaviour
     }
 
     public void RepairBlock()
-    {
+    {        
         spriteRenderer.sprite = fixedSprite;
 
         topTrigger.enabled = true;
         bottomTrigger.enabled = true;
         leftTrigger.enabled = true;
         rightTrigger.enabled = true;
+
+        isBroken = false;
+
+        repairButton.gameObject.SetActive(false);
     }
 }
