@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 
@@ -38,7 +36,8 @@ public class DestructibleWall : MonoBehaviour
 
     public void BlockDestroy(Collider2D collider)
     {
-        collider.enabled = false;
-        
+        Destroy(destroyButton.gameObject);
+        Destroy(gameObject);     
+
     }
 }

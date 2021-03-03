@@ -1,0 +1,67 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+//Script de Noé
+
+public class RepairMovableBlock : MonoBehaviour
+{
+    public Button repairButton;
+
+    public Sprite brokenSprite;
+    public Sprite fixedSprite;
+
+    public Collider2D topTrigger;
+    public Collider2D bottomTrigger;
+    public Collider2D leftTrigger;
+    public Collider2D rightTrigger;
+
+    public bool isBroken;
+
+    private SpriteRenderer spriteRenderer;
+
+
+    void Start()
+    {
+        repairButton.gameObject.SetActive(false);
+        spriteRenderer = GetComponentInParent<SpriteRenderer>();
+    }
+
+    
+    void Update()
+    {
+        if (isBroken == true)
+        {
+            topTrigger.enabled = false;
+            bottomTrigger.enabled = false;
+            leftTrigger.enabled = false;
+            rightTrigger.enabled = false;
+
+            spriteRenderer.sprite = brokenSprite;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isBroken == true)
+        {
+            repairButton.gameObject.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        repairButton.gameObject.SetActive(false);
+    }
+
+    public void RepairBlock()
+    {
+        spriteRenderer.sprite = fixedSprite;
+
+        topTrigger.enabled = true;
+        bottomTrigger.enabled = true;
+        leftTrigger.enabled = true;
+        rightTrigger.enabled = true;
+    }
+}
