@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //Albane
-public class LevelEntry : MonoBehaviour
+
+public class SceneEntry : MonoBehaviour
 {
     public void LoadScene(string sceneName)
     {
