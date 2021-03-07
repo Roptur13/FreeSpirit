@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        if(Input.GetKey(KeyCode.Z))
+        /*if(Input.GetKey(KeyCode.Z))
         {
             transform.position += Vector3.up * Time.deltaTime;
         }
@@ -33,6 +33,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += Vector3.right * Time.deltaTime;
-        }
+        }*/
     }
 }
