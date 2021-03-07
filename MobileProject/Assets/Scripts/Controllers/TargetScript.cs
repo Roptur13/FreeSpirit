@@ -10,28 +10,35 @@ public class TargetScript : MonoBehaviour
     [SerializeField]
     private bool isActive;
 
-    private Vector3 targetWantedPosition;
+    Vector3 wantedPosition;
     
     void Start()
     {
-        isActive = false;
+        //isActive = false;
+
+        ChangeTargetPosition();
     }
 
     
     void Update()
     {
-        ChangeTargetPosition(targetWantedPosition);
+        ChangeTargetPosition();
     }
 
-    void ChangeTargetPosition(Vector3 newPosition)
+    void ChangeTargetPosition()
     {
         if(Input.GetButtonDown("Fire1"))
         {
             isActive = true;
+            Vector3 clickPosition = Input.mousePosition;
 
-            newPosition = Input.mousePosition;
+            clickPosition.z = clickPosition.z - (Camera.main.transform.position.z);
 
-            transform.position = newPosition;
+            wantedPosition = Camera.main.ScreenToWorldPoint(clickPosition);            
+
+            transform.position = wantedPosition;
+
+            
         }
     }
 }
