@@ -26,7 +26,7 @@ public class RightCollider : MonoBehaviour
 
     public void RightMove()
     {
-        mainBody.transform.position += new Vector3(-0.5f, 0, 0);
+        mainBody.transform.position += new Vector3(-0.25f, 0.25f, 0);
 
     }
 }

@@ -11,7 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScenes/Scene Albane/LDAlbane.unity
     guid: 886851fbd840858499d7bbe4a1cf701e
-  - enabled: 1
-    path: Assets/Scenes/TestScenes/SamuelScene.unity
-    guid: 640ca66c0b70d8743ba147d2d22564af
   m_configObjects: {}
