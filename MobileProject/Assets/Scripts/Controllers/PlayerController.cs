@@ -10,12 +10,19 @@ public class PlayerController : MonoBehaviour
     public enum characterColor { Red, Blue, Yellow, Purple, Orange, Green };
     public characterColor color;
 
+    public PlayerManager playerManager;
+
     void Start()
     {
         
     }
 
-    
+    private void OnMouseDown()
+    {
+        playerManager.ChangeCharacter(this.gameObject);
+    }
+
+
     void Update()
     {
         /*if(Input.GetKey(KeyCode.Z))
