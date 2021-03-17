@@ -6,15 +6,24 @@ public class Interrupter : MonoBehaviour
 {
     //Albane
 
-    // Start is called before the first frame update
-    void Start()
+    public  GameObject door;
+
+    private Color m_oldColor = Color.white;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        Renderer render = GetComponent<Renderer>();
+
+        m_oldColor = render.material.color;
+        render.material.color = Color.green;
+
         
+        door.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        
+        Renderer render = GetComponent<Renderer>();
+
+        render.material.color = m_oldColor;
     }
 }
