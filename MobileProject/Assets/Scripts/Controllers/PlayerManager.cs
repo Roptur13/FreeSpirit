@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
+//Script de Noé
+
 public class PlayerManager : MonoBehaviour
 {
 
@@ -16,6 +18,8 @@ public class PlayerManager : MonoBehaviour
         {
             characters[i].GetComponent<AIPath>().enabled = false;
         }
+
+        currentCharacter = characters[0];
     }
 
     public void ChangeCharacter(GameObject player)

@@ -8,7 +8,7 @@ public class TargetScript : MonoBehaviour
 {
 
     [SerializeField]
-    private bool isActive;
+    //private bool isActive;
 
     Vector3 wantedPosition;
     
@@ -29,7 +29,7 @@ public class TargetScript : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            isActive = true;
+            //isActive = true;
             Vector3 clickPosition = Input.mousePosition;
 
             clickPosition.z = clickPosition.z - (Camera.main.transform.position.z);
