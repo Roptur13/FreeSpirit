@@ -25,5 +25,7 @@ public class Interrupter : MonoBehaviour
         Renderer render = GetComponent<Renderer>();
 
         render.material.color = m_oldColor;
+
+        door.SetActive(true);
     }
 }
