@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-
     public Transform pos1, pos2;
     public float speed;
     public Transform startPos;
@@ -35,5 +34,21 @@ public class MovingPlatform : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(pos1.position, pos2.position);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            collision.collider.transform.SetParent(transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            collision.collider.transform.SetParent(null);
+        }
     }
 }
