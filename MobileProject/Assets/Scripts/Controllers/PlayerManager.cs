@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
 
 //Script de Noé
 
@@ -16,7 +15,7 @@ public class PlayerManager : MonoBehaviour
     {
         for (int i = 0; i < characters.Length; i++)
         {
-            characters[i].GetComponent<AIPath>().enabled = false;
+            characters[i].GetComponent<PlayerMovement>().enabled = false;
         }
 
         currentCharacter = characters[0];
@@ -24,7 +23,7 @@ public class PlayerManager : MonoBehaviour
 
     public void ChangeCharacter(GameObject player)
     {
-        currentCharacter.GetComponent<AIPath>().enabled = false;
+        currentCharacter.GetComponent<PlayerMovement>().enabled = false;
         currentCharacter = player;
     }
 }

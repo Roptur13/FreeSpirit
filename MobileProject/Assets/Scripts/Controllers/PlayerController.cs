@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
 
 //Script de Noé
 
 public class PlayerController : MonoBehaviour
 {
-    public enum characterColor { Red, Blue, Yellow, Purple, Orange, Green };
+    public enum characterColor { Red, Blue, Yellow};
     public characterColor color;
 
     public PlayerManager playerManager;
@@ -20,6 +19,6 @@ public class PlayerController : MonoBehaviour
     private void OnMouseDown()
     {
         playerManager.ChangeCharacter(this.gameObject);
-        GetComponent<AIPath>().enabled = true;
+        GetComponent<PlayerMovement>().enabled = true;
     }
 }
