@@ -7,22 +7,35 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    private Vector2 targetPosition;
+    private Vector3 targetPosition;
     public float moveSpeed;
+    public bool canMove;
     
     void Start()
     {
         targetPosition = transform.position;
+        
     }
 
     
     void Update()
     {
+        if (targetPosition == transform.position)
+        {
+            canMove = true;
+        }
+        else
+        {
+            canMove = false;
+        }
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
     }
 
-    public void Move(Vector2 movementDirection)
+    public void Move(Vector3 movementDirection)
     {
-        targetPosition += movementDirection;
+        if (canMove == true)
+        {
+            targetPosition += movementDirection;
+        }        
     }
 }

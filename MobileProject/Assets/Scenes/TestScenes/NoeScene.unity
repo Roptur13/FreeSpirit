@@ -490,6 +490,7 @@ MonoBehaviour:
   pixelDistToDetect: 20
   currentCharacter: {fileID: 0}
   movement: {fileID: 0}
+  distance: 2
 --- !u!4 &571081596
 Transform:
   m_ObjectHideFlags: 0
@@ -516,11 +517,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 922990593996337314, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 922990593996337316, guid: dd2e0aee4aef7c643887055c5d9fd78a,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 922990593996337318, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: playerManager
+      value: 
+      objectReference: {fileID: 1350883034}
     - target: {fileID: 922990593996337321, guid: dd2e0aee4aef7c643887055c5d9fd78a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -580,6 +591,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BluePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 922990593996337323, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.035407543
+      objectReference: {fileID: 0}
+    - target: {fileID: 922990593996337323, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.49047184
+      objectReference: {fileID: 0}
+    - target: {fileID: 922990593996337323, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 922990593996337323, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.49047184
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd2e0aee4aef7c643887055c5d9fd78a, type: 3}
@@ -4103,6 +4134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  canMove: 0
 --- !u!1 &1847849486 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 549410234776507884, guid: 87fc272d1c90d944db78e6f606d25fe7,
@@ -4122,6 +4154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  canMove: 0
 --- !u!1 &1882007613
 GameObject:
   m_ObjectHideFlags: 0

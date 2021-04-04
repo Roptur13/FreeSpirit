@@ -13,6 +13,7 @@ public class SwipeScript : MonoBehaviour
     public int pixelDistToDetect = 20;
     public GameObject currentCharacter;
     public PlayerMovement movement;
+    public int distance;
 
     
     void Update()
@@ -41,23 +42,23 @@ public class SwipeScript : MonoBehaviour
             if(Input.touches[0].position.y >= startposition.y + pixelDistToDetect) //swipe haut
             {
                 fingerDown = false;
-                movement.Move(Vector2.up);
+                movement.Move(Vector2.up * distance);
                 Debug.Log("Up");
             }
             else if(Input.touches[0].position.x <= startposition.x - pixelDistToDetect) //swipe gauche
             {
                 fingerDown = false;
-                movement.Move(Vector2.left);
+                movement.Move(Vector2.left * distance);
             }
             else if (Input.touches[0].position.x >= startposition.x + pixelDistToDetect) //swipe droit
             {
                 fingerDown = false;
-                movement.Move(Vector2.right);
+                movement.Move(Vector2.right * distance);
             }
             else if (Input.touches[0].position.y <= startposition.y - pixelDistToDetect) //swipe bas
             {
                 fingerDown = false;
-                movement.Move(Vector2.down);
+                movement.Move(Vector2.down * distance);
             }
 
             if (fingerDown && Input.GetMouseButtonUp(0))
