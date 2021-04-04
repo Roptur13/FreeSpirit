@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
         targetPosition = transform.position;
         
     }
-
     
     void Update()
     {
@@ -37,5 +36,10 @@ public class PlayerMovement : MonoBehaviour
         {
             targetPosition += movementDirection;
         }        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        targetPosition = transform.position;
     }
 }
