@@ -6597,6 +6597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 377324486}
+  simplePush: 1
 --- !u!61 &2059555592
 BoxCollider2D:
   m_ObjectHideFlags: 0

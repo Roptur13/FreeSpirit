@@ -7,6 +7,7 @@ public class Interrupter : MonoBehaviour
     //Albane
 
     public  GameObject door;
+    public bool simplePush = true;
 
     private Color m_oldColor = Color.white;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,6 +27,8 @@ public class Interrupter : MonoBehaviour
 
         render.material.color = m_oldColor;
 
-        door.SetActive(true);
+        if (simplePush == false)
+         door.SetActive(true);
+        
     }
 }
