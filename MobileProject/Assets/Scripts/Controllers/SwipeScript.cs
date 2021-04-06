@@ -42,23 +42,23 @@ public class SwipeScript : MonoBehaviour
             if(Input.touches[0].position.y >= startposition.y + pixelDistToDetect) //swipe haut
             {
                 fingerDown = false;
-                movement.Move(Vector2.up * distance);
+                movement.Move(Vector3.up * distance);
                 Debug.Log("Up");
             }
             else if(Input.touches[0].position.x <= startposition.x - pixelDistToDetect) //swipe gauche
             {
                 fingerDown = false;
-                movement.Move(Vector2.left * distance);
+                movement.Move(Vector3.left * distance);
             }
             else if (Input.touches[0].position.x >= startposition.x + pixelDistToDetect) //swipe droit
             {
                 fingerDown = false;
-                movement.Move(Vector2.right * distance);
+                movement.Move(Vector3.right * distance);
             }
             else if (Input.touches[0].position.y <= startposition.y - pixelDistToDetect) //swipe bas
             {
                 fingerDown = false;
-                movement.Move(Vector2.down * distance);
+                movement.Move(Vector3.down * distance);
             }
 
             if (fingerDown && Input.GetMouseButtonUp(0))

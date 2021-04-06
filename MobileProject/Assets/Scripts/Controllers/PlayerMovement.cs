@@ -13,13 +13,12 @@ public class PlayerMovement : MonoBehaviour
     
     void Start()
     {
-        targetPosition = transform.position;
-        
+        targetPosition = transform.position;        
     }
     
     void Update()
     {
-        if (targetPosition == transform.position)
+        if (Vector3.Distance(targetPosition, transform.position) < 0.1f)
         {
             canMove = true;
         }
@@ -27,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         {
             canMove = false;
         }
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed*Time.deltaTime);
     }
 
     public void Move(Vector3 movementDirection)
@@ -35,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         if (canMove == true)
         {
             targetPosition += movementDirection;
+            Debug.Log(targetPosition);
         }        
     }
 
