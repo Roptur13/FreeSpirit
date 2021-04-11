@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
+//script de Samuel
 public class TopVoidCollider : MonoBehaviour
 {
     public Button topVoidButton;
