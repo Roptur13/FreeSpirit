@@ -49,7 +49,7 @@ public class RepairMovableBlock : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isBroken == true && playerController.color == PlayerController.characterColor.Blue)
+        if (isBroken == true && playerController.blue == true)
         {
             repairButton.gameObject.SetActive(true);
         }

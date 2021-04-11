@@ -6,15 +6,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public enum characterColor { Red, Blue, Yellow};
-    public characterColor color;
-
     public PlayerManager playerManager;
 
-    void Start()
-    {
-        
-    }
+    public bool blue;
+    public bool red;
+    public bool yellow;
+
 
     private void OnMouseDown()
     {

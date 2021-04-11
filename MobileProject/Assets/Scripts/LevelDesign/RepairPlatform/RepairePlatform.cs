@@ -25,14 +25,14 @@ public class RepairePlatform : MonoBehaviour
     public GameObject player;
     private PlayerController playerController;
 
-    //public SwipeScript SwipeManager;
+    
     public GameObject SwipeManager;
     public int swipeCount;
     private int currentSwipeCount;
 
     public int swipeBeforeDestroy = 2;
 
-    //public PlatformDetectPlayer PlatformDetectPlayer;
+    
     public GameObject playerDetect;
     public bool playerOnPlatform;
 
@@ -67,20 +67,6 @@ public class RepairePlatform : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (isBroken == true && playerController.color == PlayerController.characterColor.Blue)
-        {
-            repairButton.gameObject.SetActive(true);
-        }
-
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        repairButton.gameObject.SetActive(false);
-    }
-
     public void RepairBlock()
     {
         GetComponent<BoxCollider2D>().enabled = false;
@@ -103,10 +89,10 @@ public class RepairePlatform : MonoBehaviour
 
         spriteRenderer.sprite = brokenSprite;
 
-        //topTrigger.enabled = true;
-        //bottomTrigger.enabled = true;
-        //leftTrigger.enabled = true;
-        //rightTrigger.enabled = true;
+        topTrigger.enabled = true;
+        bottomTrigger.enabled = true;
+        leftTrigger.enabled = true;
+        rightTrigger.enabled = true;
 
         isBroken = true;
     }

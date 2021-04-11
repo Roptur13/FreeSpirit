@@ -141,8 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ef544ed426de048be4c6ff2435cc0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 0
   playerManager: {fileID: 0}
+  blue: 0
+  red: 1
+  yellow: 0
 --- !u!61 &6460914028122581912
 BoxCollider2D:
   m_ObjectHideFlags: 0
