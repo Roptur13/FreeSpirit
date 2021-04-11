@@ -15,10 +15,10 @@ TagManager:
   - 
   - Background
   - Wall
-  - Ground
+  - BlueChara
   - RedChara
   - RedPortal
-  - BlueChara
+  - Ground
   - BluePortal
   - YellowChara
   - YellowPortal
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: object
     uniqueID: 1089654131
+    locked: 0
+  - name: BlueChara
+    uniqueID: 14266099
     locked: 0
   - name: UI
     uniqueID: 1505166177

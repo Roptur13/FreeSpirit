@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Script de Samuel
 public class RightVoidCollider : MonoBehaviour
 {
     public Button rightVoidButton;

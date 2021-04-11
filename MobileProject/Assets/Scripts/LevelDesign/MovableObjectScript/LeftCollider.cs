@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Script de Samuel
 public class LeftCollider : MonoBehaviour
 {
     public Button leftButton;
@@ -26,7 +27,7 @@ public class LeftCollider : MonoBehaviour
 
     public void LeftMove()
     {
-        mainBody.transform.position += new Vector3(-0.25f, 0, 0);
+        mainBody.transform.position += new Vector3(1f, 0, 0);
 
     }
 }

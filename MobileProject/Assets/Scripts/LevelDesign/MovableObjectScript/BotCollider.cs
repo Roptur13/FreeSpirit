@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Script de Samuel
 public class BotCollider : MonoBehaviour
 {
     public Button botButton;
@@ -26,7 +27,7 @@ public class BotCollider : MonoBehaviour
 
     public void BotMove()
     {
-        mainBody.transform.position += new Vector3(0, 0.25f, 0);
+        mainBody.transform.position += new Vector3(0, 1f, 0);
 
     }
 }

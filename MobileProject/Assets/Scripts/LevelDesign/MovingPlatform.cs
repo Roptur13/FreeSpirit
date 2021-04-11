@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Script de Samuel
+
 public class MovingPlatform : MonoBehaviour
 {
     public Transform pos1, pos2;
