@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 targetPosition;
     public float moveSpeed;
     public bool canMove;
+
+    private Vector3 previousPosition;
     
     void Start()
     {
@@ -18,9 +20,10 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        if (Vector3.Distance(targetPosition, transform.position) < 0.1f)
+        if (targetPosition == transform.position)
         {
             canMove = true;
+            previousPosition = transform.position;
         }
         else
         {
@@ -40,6 +43,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        targetPosition = transform.position;
+        targetPosition = previousPosition;
     }
 }

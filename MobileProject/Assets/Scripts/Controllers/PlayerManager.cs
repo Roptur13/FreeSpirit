@@ -25,5 +25,6 @@ public class PlayerManager : MonoBehaviour
     {
         currentCharacter.GetComponent<PlayerMovement>().enabled = false;
         currentCharacter = player;
+        Debug.Log(currentCharacter);
     }
 }
