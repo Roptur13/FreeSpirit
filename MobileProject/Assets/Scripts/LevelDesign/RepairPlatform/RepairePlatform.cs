@@ -103,10 +103,10 @@ public class RepairePlatform : MonoBehaviour
 
         spriteRenderer.sprite = brokenSprite;
 
-        topTrigger.enabled = true;
-        bottomTrigger.enabled = true;
-        leftTrigger.enabled = true;
-        rightTrigger.enabled = true;
+        //topTrigger.enabled = true;
+        //bottomTrigger.enabled = true;
+        //leftTrigger.enabled = true;
+        //rightTrigger.enabled = true;
 
         isBroken = true;
     }
