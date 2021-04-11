@@ -15,6 +15,8 @@ public class SwipeScript : MonoBehaviour
     public PlayerMovement movement;
     public int distance;
 
+    public int swipeCount = 0;
+
     
     void Update()
     {
@@ -43,22 +45,25 @@ public class SwipeScript : MonoBehaviour
             {
                 fingerDown = false;
                 movement.Move(Vector3.up * distance);
-                Debug.Log("Up");
+                swipeCount = swipeCount + 1;
             }
             else if(Input.touches[0].position.x <= startposition.x - pixelDistToDetect) //swipe gauche
             {
                 fingerDown = false;
                 movement.Move(Vector3.left * distance);
+                swipeCount = swipeCount + 1;
             }
             else if (Input.touches[0].position.x >= startposition.x + pixelDistToDetect) //swipe droit
             {
                 fingerDown = false;
                 movement.Move(Vector3.right * distance);
+                swipeCount = swipeCount + 1;
             }
             else if (Input.touches[0].position.y <= startposition.y - pixelDistToDetect) //swipe bas
             {
                 fingerDown = false;
                 movement.Move(Vector3.down * distance);
+                swipeCount = swipeCount + 1;
             }
 
             if (fingerDown && Input.GetMouseButtonUp(0))
