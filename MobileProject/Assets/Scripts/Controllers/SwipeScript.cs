@@ -24,6 +24,7 @@ public class SwipeScript : MonoBehaviour
 
         currentCharacter = playerManager.currentCharacter;
         movement = currentCharacter.GetComponent<PlayerMovement>();
+        
     }
 
     void SwipeDetection()

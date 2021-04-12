@@ -6,12 +6,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    [SerializeField]
     private Vector3 targetPosition;
+
     public float moveSpeed;
     public bool canMove;
 
-    private Vector3 previousPosition;
+    [SerializeField]
+    public Vector3 previousPosition;
     
     void Start()
     {
@@ -30,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
             canMove = false;
         }
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed*Time.deltaTime);
+        //Debug.Log(targetPosition);
     }
 
     public void Move(Vector3 movementDirection)
@@ -37,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         if (canMove == true)
         {
             targetPosition += movementDirection;
-            Debug.Log(targetPosition);
+            //Debug.Log(targetPosition);
         }        
     }
 

@@ -30,7 +30,7 @@ public class RepairePlatform : MonoBehaviour
     public int swipeCount;
     private int currentSwipeCount;
 
-    public int swipeBeforeDestroy = 2;
+    public int swipeBeforeDestroy = 3;
 
     
     public GameObject playerDetect;
@@ -58,7 +58,7 @@ public class RepairePlatform : MonoBehaviour
         }
 
         swipeCount = SwipeManager.GetComponent<SwipeScript >().swipeCount;
-        playerOnPlatform = playerDetect.GetComponent<PlatformDetectPlayer >().playerOnPlatform;
+        playerOnPlatform = playerDetect.GetComponent<PlatformDetectPlayer>().playerOnPlatform;
 
         if (swipeCount - currentSwipeCount >= swipeBeforeDestroy && playerOnPlatform == false)
         {

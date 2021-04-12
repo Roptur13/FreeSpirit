@@ -34,7 +34,10 @@ public class BotVoidCollider : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        botVoidButton.gameObject.SetActive(true);
+        if (collision.gameObject.layer == LayerMask.NameToLayer("YellowChara"))
+        {
+            botVoidButton.gameObject.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -55,5 +58,6 @@ public class BotVoidCollider : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         botMove = false;
         voidCol.enabled = true;
+        player.GetComponent<PlayerMovement>().previousPosition = player.transform.position;
     }
 }

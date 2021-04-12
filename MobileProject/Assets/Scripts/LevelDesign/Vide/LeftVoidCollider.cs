@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +12,9 @@ public class LeftVoidCollider : MonoBehaviour
 
     private bool leftMove;
     private Vector3 velocity;
+
+    public Vector3 previousPosition; 
+
     void Start()
     {
         leftVoidButton.gameObject.SetActive(false);
@@ -58,5 +61,6 @@ public class LeftVoidCollider : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         leftMove = false;
         voidCol.enabled = true;
+        player.GetComponent<PlayerMovement>().previousPosition = player.transform.position;
     }
 }
