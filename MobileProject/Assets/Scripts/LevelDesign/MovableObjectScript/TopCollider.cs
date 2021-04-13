@@ -55,6 +55,11 @@ public class TopCollider : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.layer != LayerMask.NameToLayer("YellowChara"))
+        {
+            obstacleTop = false;
+        }
+
         upButton.gameObject.SetActive(false);
     }
 

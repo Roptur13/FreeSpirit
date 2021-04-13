@@ -56,6 +56,7 @@ public class LeftCollider : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+
         leftButton.gameObject.SetActive(false);
     }
 

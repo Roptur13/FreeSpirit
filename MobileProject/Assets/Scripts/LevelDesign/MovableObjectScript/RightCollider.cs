@@ -55,6 +55,11 @@ public class RightCollider : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.layer != LayerMask.NameToLayer("YellowChara"))
+        {
+            obstacleRight = false;
+        }
+
         rightButton.gameObject.SetActive(false);
     }
 
