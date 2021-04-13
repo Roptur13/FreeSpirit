@@ -8,6 +8,9 @@ public class RightCollider : MonoBehaviour
 {
     public Button rightButton;
     public GameObject mainBody;
+    public bool obstacleRight;
+    public bool obstacleLeft;
+    public LeftCollider leftCollider;
 
     private bool rightMove;
     private Vector3 voidVelocity;
@@ -28,14 +31,25 @@ public class RightCollider : MonoBehaviour
         {
             mainBody.transform.position = mainBody.transform.position;
         }
+
+        obstacleLeft = leftCollider.obstacleLeft;
     }
 
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("YellowChara") || collision.gameObject.layer == LayerMask.NameToLayer("BlueChara") || collision.gameObject.layer == LayerMask.NameToLayer("RedChara"))
+        if ((collision.gameObject.layer == LayerMask.NameToLayer("YellowChara") || collision.gameObject.layer == LayerMask.NameToLayer("BlueChara") || collision.gameObject.layer == LayerMask.NameToLayer("RedChara")) && obstacleLeft == false)
         {
             rightButton.gameObject.SetActive(true);
+        }
+        else if ((collision.gameObject.layer != LayerMask.NameToLayer("YellowChara") && collision.gameObject.layer != LayerMask.NameToLayer("BlueChara") && collision.gameObject.layer != LayerMask.NameToLayer("RedChara")))
+        {
+            obstacleRight = true;
+        }
+        
+        if (obstacleLeft == true)
+        {
+            rightButton.gameObject.SetActive(false);
         }
     }
 
