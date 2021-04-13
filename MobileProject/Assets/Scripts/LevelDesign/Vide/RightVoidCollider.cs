@@ -9,9 +9,14 @@ public class RightVoidCollider : MonoBehaviour
     public Button rightVoidButton;
     public GameObject player;
     public BoxCollider2D voidCol;
+    public bool rightCollision;
+    public bool leftCollision;
+    public LeftVoidCollider leftVoidCollider;
 
     private bool rightMove;
     private Vector3 velocity;
+
+    //public Vector3 previousPosition;
 
     void Start()
     {
@@ -30,19 +35,43 @@ public class RightVoidCollider : MonoBehaviour
         {
             player.transform.position = player.transform.position;
         }
+
+        leftCollision = leftVoidCollider.leftCollision;
+        //Debug.Log(leftCollision);
     }
 
     // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("YellowChara"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("YellowChara") )
         {
-            rightVoidButton.gameObject.SetActive(true);
+            if (leftCollision == false)
+            {
+                rightVoidButton.gameObject.SetActive(true);
+            }
+            Debug.Log("yellowChara");
         }
+        else
+        {
+            Debug.Log("1");
+            rightCollision = true;  
+
+            rightVoidButton.gameObject.SetActive(false);
+        }
+        if (leftCollision == true)
+        {
+            rightVoidButton.gameObject.SetActive(false);
+        }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.layer != LayerMask.NameToLayer("YellowChara"))
+        {
+            rightCollision = false;
+        }
+
         rightVoidButton.gameObject.SetActive(false);
     }
 

@@ -49,11 +49,6 @@ public class RepairePlatform : MonoBehaviour
     {
         if (isBroken == true)
         {
-            //topTrigger.enabled = false;
-            //bottomTrigger.enabled = false;
-            //leftTrigger.enabled = false;
-            //rightTrigger.enabled = false;
-
             spriteRenderer.sprite = brokenSprite;
         }
 
@@ -63,8 +58,7 @@ public class RepairePlatform : MonoBehaviour
         if (swipeCount - currentSwipeCount >= swipeBeforeDestroy && playerOnPlatform == false)
         {
             DestroyBlock();
-        }
-        
+        }        
     }
 
     public void RepairBlock()

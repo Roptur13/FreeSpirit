@@ -9,9 +9,15 @@ public class BotVoidCollider : MonoBehaviour
     public Button botVoidButton;
     public GameObject player;
     public BoxCollider2D voidCol;
+    public bool botCollision;
+    public bool topCollision;
+    public TopVoidCollider topVoidCollider;
 
     private bool botMove;
     private Vector3 velocity;
+
+    //public Vector3 previousPosition;
+
     void Start()
     {
         botVoidButton.gameObject.SetActive(false);
@@ -34,14 +40,31 @@ public class BotVoidCollider : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("YellowChara"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("YellowChara") && topCollision == false)
         {
             botVoidButton.gameObject.SetActive(true);
+        }
+        else if (collision.gameObject.layer != LayerMask.NameToLayer("YellowChara"))
+        {
+            Debug.Log("4");
+            botCollision = true;
+
+
+            botVoidButton.gameObject.SetActive(false);
+        }
+        if (topCollision == true)
+        {
+            botVoidButton.gameObject.SetActive(false);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.layer != LayerMask.NameToLayer("YellowChara"))
+        {
+            topCollision = false;
+        }
+
         botVoidButton.gameObject.SetActive(false);
     }
 

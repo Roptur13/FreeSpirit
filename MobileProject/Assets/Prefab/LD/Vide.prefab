@@ -123,7 +123,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.14}
+  m_Offset: {x: 0, y: -0.1622252}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -134,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.2}
+  m_Size: {x: 0.16, y: 0.15554962}
   m_EdgeRadius: 0
 --- !u!114 &4112802116655991654
 MonoBehaviour:
@@ -150,6 +150,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botVoidButton: {fileID: 4112802117271889308}
   player: {fileID: 0}
+  voidCol: {fileID: 0}
+  botCollision: 0
+  topCollision: 0
+  topVoidCollider: {fileID: 4112802118326774092}
 --- !u!1 &4112802116666330609
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +589,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14, y: 0}
+  m_Offset: {x: -0.16222516, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -596,7 +600,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.13}
+  m_Size: {x: 0.15554972, y: 0.13}
   m_EdgeRadius: 0
 --- !u!114 &4112802117445188787
 MonoBehaviour:
@@ -612,6 +616,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftVoidButton: {fileID: 4112802116666330611}
   player: {fileID: 0}
+  voidCol: {fileID: 0}
+  rightCollision: 0
+  leftCollision: 0
+  rightVoidCollider: {fileID: 4112802118095920986}
 --- !u!1 &4112802117507460412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1131,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.14, y: 0}
+  m_Offset: {x: 0.16311413, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1134,7 +1142,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.13}
+  m_Size: {x: 0.15377176, y: 0.13}
   m_EdgeRadius: 0
 --- !u!114 &4112802118095920986
 MonoBehaviour:
@@ -1150,6 +1158,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightVoidButton: {fileID: 4112802117314644523}
   player: {fileID: 0}
+  voidCol: {fileID: 0}
+  rightCollision: 0
+  leftCollision: 0
+  leftVoidCollider: {fileID: 4112802117445188787}
 --- !u!1 &4112802118106444926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1241,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.14}
+  m_Offset: {x: 0, y: 0.16133612}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1240,7 +1252,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.2}
+  m_Size: {x: 0.16, y: 0.15732777}
   m_EdgeRadius: 0
 --- !u!114 &4112802118326774092
 MonoBehaviour:
@@ -1256,6 +1268,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topVoidButton: {fileID: 4112802117894249161}
   player: {fileID: 0}
+  voidCol: {fileID: 0}
+  botCollision: 0
+  topCollision: 0
+  botVoidCollider: {fileID: 4112802116655991654}
 --- !u!1 &4112802118508544891
 GameObject:
   m_ObjectHideFlags: 0

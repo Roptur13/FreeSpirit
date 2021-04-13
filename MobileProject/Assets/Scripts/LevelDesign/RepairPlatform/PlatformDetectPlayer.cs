@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Albane & Noé
-//Detecte tout les elements
+//Détecte tout les elements
 
 public class PlatformDetectPlayer : MonoBehaviour
 {
