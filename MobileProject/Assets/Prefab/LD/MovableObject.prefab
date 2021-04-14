@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5725617363337425224}
   - component: {fileID: 4986364018549393393}
   - component: {fileID: 732257900418233298}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 2519949416401818787}
   - component: {fileID: 2519949416401818797}
   - component: {fileID: 2519949416401818796}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 2519949416766604253}
   - component: {fileID: 2519949416766604254}
   - component: {fileID: 2519949416766604255}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,6 +230,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upButton: {fileID: 2519949416852143829}
   mainBody: {fileID: 2519949418083805711}
+  obstacleTop: 0
+  obstacleBot: 0
+  botCollider: {fileID: 2519949417277533152}
 --- !u!1 &2519949416785682234
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +244,7 @@ GameObject:
   - component: {fileID: 2519949416785682235}
   - component: {fileID: 2519949416785682212}
   - component: {fileID: 2519949416785682213}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,6 +305,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightButton: {fileID: 2519949416789316914}
   mainBody: {fileID: 2519949418083805711}
+  obstacleRight: 0
+  obstacleLeft: 0
+  leftCollider: {fileID: 2519949417556785870}
 --- !u!1 &2519949416789316912
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +320,7 @@ GameObject:
   - component: {fileID: 2519949416789316924}
   - component: {fileID: 2519949416789316915}
   - component: {fileID: 2519949416789316914}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rightButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +450,7 @@ GameObject:
   - component: {fileID: 2519949416852143831}
   - component: {fileID: 2519949416852143830}
   - component: {fileID: 2519949416852143829}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: topButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +580,7 @@ GameObject:
   - component: {fileID: 2519949417024412104}
   - component: {fileID: 2519949417024412111}
   - component: {fileID: 2519949417024412110}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: leftButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -717,7 +723,7 @@ Transform:
   m_GameObject: {fileID: 2519949417210335175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 2519949416766604253}
   - {fileID: 2519949417556785868}
@@ -738,7 +744,7 @@ GameObject:
   - component: {fileID: 2519949417222866266}
   - component: {fileID: 2519949417222866265}
   - component: {fileID: 2519949417222866264}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: botButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -867,7 +873,7 @@ GameObject:
   - component: {fileID: 2519949417263488347}
   - component: {fileID: 2519949417263488325}
   - component: {fileID: 2519949417263488324}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -945,7 +951,7 @@ GameObject:
   - component: {fileID: 2519949417277533159}
   - component: {fileID: 2519949417277533158}
   - component: {fileID: 2519949417277533152}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1006,6 +1012,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botButton: {fileID: 2519949417222866264}
   mainBody: {fileID: 2519949418083805711}
+  obstacleBot: 0
+  obstacleTop: 0
+  topCollider: {fileID: 2519949416766604255}
 --- !u!1 &2519949417349636633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +1026,7 @@ GameObject:
   - component: {fileID: 2519949417349636634}
   - component: {fileID: 2519949417349636612}
   - component: {fileID: 2519949417349636635}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1095,7 +1104,7 @@ GameObject:
   - component: {fileID: 2519949417556785868}
   - component: {fileID: 2519949417556785869}
   - component: {fileID: 2519949417556785870}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1156,6 +1165,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftButton: {fileID: 2519949417024412110}
   mainBody: {fileID: 2519949418083805711}
+  obstacleLeft: 0
+  obstacleRight: 0
+  rightCollider: {fileID: 2519949416785682213}
 --- !u!1 &2519949417995847372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,7 +1179,7 @@ GameObject:
   - component: {fileID: 2519949417995847373}
   - component: {fileID: 2519949417995847375}
   - component: {fileID: 2519949417995847374}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1246,7 +1258,7 @@ GameObject:
   - component: {fileID: 2519949418080492149}
   - component: {fileID: 2519949418080492148}
   - component: {fileID: 2519949418080492107}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: CanvaMovable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1347,8 +1359,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2519949418083805707}
   - component: {fileID: 2519949418083805706}
-  - component: {fileID: 2519949418083805705}
-  - component: {fileID: 2519949418083805704}
+  - component: {fileID: 1554260399130113940}
+  - component: {fileID: 7853565620529350288}
   m_Layer: 0
   m_Name: MovableObject
   m_TagString: Untagged
@@ -1365,7 +1377,7 @@ Transform:
   m_GameObject: {fileID: 2519949418083805711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.88, y: 0.5, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8461690936898680768}
   - {fileID: 2519949417210335168}
@@ -1412,8 +1424,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.4245283, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 299d6ae3a3394d44b82236c0807b3c63, type: 3}
+  m_Color: {r: 0.023529412, g: 0.5019608, b: 0.05490196, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1423,28 +1435,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &2519949418083805705
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2519949418083805711}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 10
-  m_LinearDrag: 5
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &2519949418083805704
+--- !u!61 &1554260399130113940
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1459,17 +1450,38 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &7853565620529350288
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519949418083805711}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &9038846824993946963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,7 +1494,7 @@ GameObject:
   - component: {fileID: 3034003825318631058}
   - component: {fileID: 4223585498309657069}
   - component: {fileID: 7226378991011177722}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: RepairButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1610,42 +1622,52 @@ PrefabInstance:
     - target: {fileID: 5395669720260672992, guid: e16bca653e3ce4e42a829ad6f4de9b83,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.5016928
+      value: 0.0031984411
       objectReference: {fileID: 0}
     - target: {fileID: 5395669720260672992, guid: e16bca653e3ce4e42a829ad6f4de9b83,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.4
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5395669720260672992, guid: e16bca653e3ce4e42a829ad6f4de9b83,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.5291075
+      value: -0.00000008940697
       objectReference: {fileID: 0}
     - target: {fileID: 5395669720260672992, guid: e16bca653e3ce4e42a829ad6f4de9b83,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.4
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5395669720260672992, guid: e16bca653e3ce4e42a829ad6f4de9b83,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5395669720260672993, guid: e16bca653e3ce4e42a829ad6f4de9b83,
         type: 3}
       propertyPath: m_Name
       value: RepairMovable
       objectReference: {fileID: 0}
+    - target: {fileID: 5395669720260672993, guid: e16bca653e3ce4e42a829ad6f4de9b83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5395669720260673022, guid: e16bca653e3ce4e42a829ad6f4de9b83,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.53435004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5395669720260673022, guid: e16bca653e3ce4e42a829ad6f4de9b83,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.50086987
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5395669720260673022, guid: e16bca653e3ce4e42a829ad6f4de9b83,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.71787107
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5395669720260673022, guid: e16bca653e3ce4e42a829ad6f4de9b83,
         type: 3}
