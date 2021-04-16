@@ -12,15 +12,18 @@ public class LeftVoidCollider : MonoBehaviour
     public bool rightCollision;
     public bool leftCollision;
     public RightVoidCollider rightVoidCollider;
+    public PlayerManager playerManager;
+    public PlayerMovement playerMovement;
 
     private bool leftMove;
+    private bool leftButtonIsActivable;
     private Vector3 velocity;
 
     //private Vector3 previousPosition; 
 
     void Start()
     {
-        leftVoidButton.gameObject.SetActive(false);
+        leftButtonIsActivable = false;
         leftMove = false;
     }
 
@@ -31,59 +34,97 @@ public class LeftVoidCollider : MonoBehaviour
             velocity = new Vector3(2.0f, 0.0f, 0.0f);
             player.transform.position += velocity * Time.deltaTime;
         }
-        else if (leftMove == false)
+        /*else if (leftMove == false)
         {
             player.transform.position = player.transform.position;
-        }
+        }*/
 
         rightCollision = rightVoidCollider.rightCollision;
-    }
 
-    // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("YellowChara") && rightCollision == false)
+        if (rightCollision == true || leftButtonIsActivable == false)
+        {
+            leftVoidButton.gameObject.SetActive(false);
+        }
+
+        if (leftButtonIsActivable == true)
         {
             leftVoidButton.gameObject.SetActive(true);
-            Debug.Log("g");
         }
-        else if (collision.gameObject.layer != LayerMask.NameToLayer("YellowChara"))
+    }
+
+    
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject == player)
+        {
+            player.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.NeverSleep;
+
+            if (rightCollision == false)
+            {
+                if (player == playerManager.currentCharacter)
+                {
+                    leftButtonIsActivable = true;
+                }
+                else
+                {
+                    leftButtonIsActivable = false;
+                }
+
+            }
+            else
+            {
+                leftButtonIsActivable = false;
+                Debug.Log("objet bloquant à droite");
+            }
+            
+        }
+        else
         {
             Debug.Log("2");
-            leftCollision = true;
+            if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                leftCollision = true;
 
-
-            leftVoidButton.gameObject.SetActive(false);
+                leftButtonIsActivable = false;
+            }
+            
         }
-        if (leftCollision == true)
-        {
-            leftVoidButton.gameObject.SetActive(false);
-        }
-
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer != LayerMask.NameToLayer("YellowChara"))
+        if (collision.gameObject == player)
         {
-            leftCollision = false;
+            leftButtonIsActivable = false;
+            player.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.StartAwake;
         }
-
-        leftVoidButton.gameObject.SetActive(false);
+        else
+        {
+            if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                leftCollision = false;
+            }
+            
+        }
     }
 
     public void LeftVoidMove()
     {
+        Debug.Log("le bouton marche");
         StartCoroutine(leftGlide());
     }
 
     IEnumerator leftGlide()
     {
+        playerMovement.isJumping = true;
         leftMove = true;
         voidCol.enabled = !voidCol.enabled;
         yield return new WaitForSeconds(1.0f);
         leftMove = false;
         voidCol.enabled = true;
-        player.GetComponent<PlayerMovement>().previousPosition = player.transform.position;
+        playerMovement.previousPosition = player.transform.position;
+        playerMovement.targetPosition = player.transform.position;
+        playerMovement.isJumping = false;
     }
 }

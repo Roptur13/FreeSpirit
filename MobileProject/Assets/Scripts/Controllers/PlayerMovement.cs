@@ -7,17 +7,19 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private Vector3 targetPosition;
+    public Vector3 targetPosition;
 
     public float moveSpeed;
     public bool canMove;
+    public bool isJumping;
 
     [SerializeField]
     public Vector3 previousPosition;
     
     void Start()
     {
-        targetPosition = transform.position;        
+        targetPosition = transform.position;
+        isJumping = false;
     }
     
     void Update()
@@ -31,8 +33,13 @@ public class PlayerMovement : MonoBehaviour
         {
             canMove = false;
         }
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed*Time.deltaTime);
-        //Debug.Log(targetPosition);
+
+        if (isJumping == false)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        }
+        
+        //Debug.Log(isJumping);
     }
 
     public void Move(Vector3 movementDirection)

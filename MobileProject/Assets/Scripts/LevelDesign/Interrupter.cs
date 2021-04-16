@@ -9,26 +9,38 @@ public class Interrupter : MonoBehaviour
     public  GameObject door;
     public bool simplePush = true;
 
+    private Renderer render;
+
     private Color m_oldColor = Color.white;
+
+    private void Start()
+    {
+        render = GetComponent<Renderer>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Renderer render = GetComponent<Renderer>();
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            m_oldColor = render.material.color;
+            render.material.color = Color.green;
 
-        m_oldColor = render.material.color;
-        render.material.color = Color.green;
 
+            door.SetActive(false);
+        }
         
-        door.SetActive(false);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Renderer render = GetComponent<Renderer>();
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            render.material.color = m_oldColor;
 
-        render.material.color = m_oldColor;
-
-        if (simplePush == false)
-         door.SetActive(true);
+            if (simplePush == false)
+                door.SetActive(true);
+        }
+        
         
     }
 }

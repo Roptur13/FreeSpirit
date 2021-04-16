@@ -11,6 +11,7 @@ public class BotCollider : MonoBehaviour
     public bool obstacleBot;
     public bool obstacleTop;
     public TopCollider topCollider;
+    public PlayerManager playerManager;
 
     private bool botMove;
     private Vector3 voidVelocity;
@@ -36,31 +37,42 @@ public class BotCollider : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if ((collision.gameObject.layer == LayerMask.NameToLayer("YellowChara") || collision.gameObject.layer == LayerMask.NameToLayer("BlueChara") || collision.gameObject.layer == LayerMask.NameToLayer("RedChara")) && obstacleTop == false)
+        if (collision.gameObject == playerManager.currentCharacter)
         {
-            botButton.gameObject.SetActive(true);
+            if (obstacleTop == false)
+            {
+                botButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                botButton.gameObject.SetActive(false);
+            }
         }
-        else if ((collision.gameObject.layer != LayerMask.NameToLayer("YellowChara") && collision.gameObject.layer != LayerMask.NameToLayer("BlueChara") && collision.gameObject.layer != LayerMask.NameToLayer("RedChara")))
+        else
         {
-            obstacleBot = true;
-        }
-
-        if (obstacleBot == true)
-        {
-            botButton.gameObject.SetActive(false);
-        }
+            if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                obstacleBot = true;
+            }            
+        }        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer != LayerMask.NameToLayer("YellowChara"))
+        if (collision.gameObject == playerManager.currentCharacter)
         {
-            obstacleBot = false;
+            botButton.gameObject.SetActive(false);
         }
-
-        botButton.gameObject.SetActive(false);
+        else
+        {
+            if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                obstacleBot = false;
+            }
+        }        
+        
     }
 
     public void BotMove()

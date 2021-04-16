@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 1235517628541424634}
   m_Layer: 11
   m_Name: RedPlayer
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,5 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7f67329d895c640965a1609dd1266e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetPosition: {x: 0, y: 0, z: 0}
   moveSpeed: 10
   canMove: 0
+  previousPosition: {x: 0, y: 0, z: 0}

@@ -9,6 +9,7 @@ public class PlatformRepairDetection : MonoBehaviour
     public GameObject player;
     public Button RepairButton;
     private PlayerController playerController;
+
     
     void Start()
     {        
@@ -17,22 +18,38 @@ public class PlatformRepairDetection : MonoBehaviour
 
     void Update()
     {
-        player = playerManager.currentCharacter;
+        
         playerController = player.GetComponent<PlayerController>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("BlueChara"))
+        if (collision.gameObject == player)
         {
-            RepairButton.gameObject.SetActive(true);
-            Debug.Log("trux");
+            player.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.NeverSleep;
+
+            if (player == playerManager.currentCharacter)
+            {
+                RepairButton.gameObject.SetActive(true);
+                Debug.Log("trux");
+            }
+            else
+            {
+                RepairButton.gameObject.SetActive(false);
+            }
         }
         
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        RepairButton.gameObject.SetActive(false);
+        if (collision.gameObject == player)
+        {
+            RepairButton.gameObject.SetActive(false);
+            Debug.Log("bouton viré");
+
+            player.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.StartAwake;
+
+        }        
     }
 }

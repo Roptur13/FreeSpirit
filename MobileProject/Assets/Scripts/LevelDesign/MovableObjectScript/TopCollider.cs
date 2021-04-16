@@ -11,6 +11,8 @@ public class TopCollider : MonoBehaviour
     public bool obstacleTop;
     public bool obstacleBot;
     public BotCollider botCollider;
+    public PlayerManager playerManager;
+    private bool characterDetected;
 
     private bool topMove;
     private Vector3 voidVelocity;
@@ -33,34 +35,46 @@ public class TopCollider : MonoBehaviour
         }
 
         obstacleBot = botCollider.obstacleBot;
+
+        
     }
 
     // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if ((collision.gameObject.layer == LayerMask.NameToLayer("YellowChara") || collision.gameObject.layer == LayerMask.NameToLayer("BlueChara") || collision.gameObject.layer == LayerMask.NameToLayer("RedChara")) && obstacleBot == false)
+        if ()
         {
-            upButton.gameObject.SetActive(true);
+            if (obstacleBot == false)
+            {
+                upButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                upButton.gameObject.SetActive(false);
+            }
         }
-        else if ((collision.gameObject.layer != LayerMask.NameToLayer("YellowChara") && collision.gameObject.layer != LayerMask.NameToLayer("BlueChara") && collision.gameObject.layer != LayerMask.NameToLayer("RedChara")))
+        else
         {
-            obstacleTop = true;
-        }
-
-        if (obstacleBot == true)
-        {
-            upButton.gameObject.SetActive(false);
+            if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                obstacleTop = true;
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer != LayerMask.NameToLayer("YellowChara"))
+        if (collision.gameObject == playerManager.currentCharacter)
         {
-            obstacleTop = false;
+            upButton.gameObject.SetActive(false);
         }
-
-        upButton.gameObject.SetActive(false);
+        else
+        {
+            if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                obstacleTop = false;
+            }
+        }
     }
 
     public void TopMove()

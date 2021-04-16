@@ -80,7 +80,7 @@ public class RepairePlatform : MonoBehaviour
     public void DestroyBlock()
     {
         GetComponent<BoxCollider2D>().enabled = true;
-
+        Debug.Log("x");
         spriteRenderer.sprite = brokenSprite;
 
         topTrigger.enabled = true;

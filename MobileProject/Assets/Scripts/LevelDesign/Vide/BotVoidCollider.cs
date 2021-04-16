@@ -12,15 +12,18 @@ public class BotVoidCollider : MonoBehaviour
     public bool botCollision;
     public bool topCollision;
     public TopVoidCollider topVoidCollider;
+    public PlayerManager playerManager;
+    public PlayerMovement playerMovement;
 
     private bool botMove;
+    private bool botButtonIsActivable;
     private Vector3 velocity;
 
     //public Vector3 previousPosition;
 
     void Start()
     {
-        botVoidButton.gameObject.SetActive(false);
+        botButtonIsActivable = false;
         botMove = false;
     }
 
@@ -35,37 +38,69 @@ public class BotVoidCollider : MonoBehaviour
         {
             player.transform.position = player.transform.position;
         }
-    }
 
-    // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("YellowChara") && topCollision == false)
+        topCollision = topVoidCollider.topCollision;
+
+        if (topCollision == true || botButtonIsActivable == false)
+        {
+            botVoidButton.gameObject.SetActive(false);
+        }
+
+        if (botButtonIsActivable == true)
         {
             botVoidButton.gameObject.SetActive(true);
         }
-        else if (collision.gameObject.layer != LayerMask.NameToLayer("YellowChara"))
+    }
+
+    // Update is called once per frame
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject == player)
+        {
+            player.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.NeverSleep;
+            if (topCollision == false)
+            {
+                if (player == playerManager.currentCharacter)
+                {
+                    botButtonIsActivable = true;
+                }
+                else
+                {
+                    botButtonIsActivable = false;
+                }
+            }
+            else
+            {
+                botButtonIsActivable = false;
+            }
+        }
+        else
         {
             Debug.Log("4");
-            botCollision = true;
-
-
-            botVoidButton.gameObject.SetActive(false);
-        }
-        if (topCollision == true)
-        {
-            botVoidButton.gameObject.SetActive(false);
-        }
+            if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                botCollision = true;
+                botButtonIsActivable = false;
+            }
+        }        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer != LayerMask.NameToLayer("YellowChara"))
+        if (collision.gameObject == player)
         {
-            topCollision = false;
+            botButtonIsActivable = false;
+            player.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.StartAwake;
         }
+        else
+        {
+            if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                Debug.Log("z");
+                botCollision = false;
+            }
 
-        botVoidButton.gameObject.SetActive(false);
+        }
     }
 
     public void BotVoidMove()
@@ -76,11 +111,14 @@ public class BotVoidCollider : MonoBehaviour
 
     IEnumerator botClimb()
     {
+        playerMovement.isJumping = true;
         botMove = true;
         voidCol.enabled = !voidCol.enabled;
         yield return new WaitForSeconds(1.0f);
         botMove = false;
         voidCol.enabled = true;
-        player.GetComponent<PlayerMovement>().previousPosition = player.transform.position;
+        playerMovement.previousPosition = player.transform.position;
+        playerMovement.targetPosition = player.transform.position;
+        playerMovement.isJumping = false;
     }
 }
