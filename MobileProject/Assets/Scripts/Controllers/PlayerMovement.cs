@@ -13,6 +13,13 @@ public class PlayerMovement : MonoBehaviour
     public bool canMove;
     public bool isJumping;
 
+    public SwipeScript swipe;
+
+    private Animator animator;
+
+    public float animValueX;
+    public float animValueY;
+
     [SerializeField]
     public Vector3 previousPosition;
     
@@ -20,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
     {
         targetPosition = transform.position;
         isJumping = false;
+        animator = GetComponent<Animator>();
+        
     }
     
     void Update()
@@ -28,6 +37,9 @@ public class PlayerMovement : MonoBehaviour
         {
             canMove = true;
             previousPosition = transform.position;
+
+            //animValueX = 0f;
+            //animValue = 0f;
         }
         else
         {
@@ -37,6 +49,8 @@ public class PlayerMovement : MonoBehaviour
         if (isJumping == false)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            animator.SetFloat("Move X", animValueX);
+            animator.SetFloat("Move Y", animValueY);
         }
         
         //Debug.Log(isJumping);
