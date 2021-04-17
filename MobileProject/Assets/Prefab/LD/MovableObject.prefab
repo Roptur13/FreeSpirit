@@ -157,7 +157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Down Button
+  m_Text: Push
 --- !u!1 &2519949416766604252
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 2519949416766604253}
   - component: {fileID: 2519949416766604254}
   - component: {fileID: 2519949416766604255}
+  - component: {fileID: 4684032326502846173}
   m_Layer: 2
   m_Name: Top
   m_TagString: Untagged
@@ -233,6 +234,29 @@ MonoBehaviour:
   obstacleTop: 0
   obstacleBot: 0
   botCollider: {fileID: 2519949417277533152}
+  playerManager: {fileID: 0}
+  repairMovable: {fileID: 8461690936898680769}
+--- !u!50 &4684032326502846173
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519949416766604252}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2519949416785682234
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +268,7 @@ GameObject:
   - component: {fileID: 2519949416785682235}
   - component: {fileID: 2519949416785682212}
   - component: {fileID: 2519949416785682213}
+  - component: {fileID: 1734647828053721147}
   m_Layer: 2
   m_Name: Right
   m_TagString: Untagged
@@ -308,6 +333,29 @@ MonoBehaviour:
   obstacleRight: 0
   obstacleLeft: 0
   leftCollider: {fileID: 2519949417556785870}
+  playerManager: {fileID: 0}
+  repairMovable: {fileID: 8461690936898680769}
+--- !u!50 &1734647828053721147
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519949416785682234}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2519949416789316912
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +987,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Right Button
+  m_Text: Push
 --- !u!1 &2519949417277533157
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +999,7 @@ GameObject:
   - component: {fileID: 2519949417277533159}
   - component: {fileID: 2519949417277533158}
   - component: {fileID: 2519949417277533152}
+  - component: {fileID: 4805142254157109550}
   m_Layer: 2
   m_Name: Bot
   m_TagString: Untagged
@@ -1015,6 +1064,29 @@ MonoBehaviour:
   obstacleBot: 0
   obstacleTop: 0
   topCollider: {fileID: 2519949416766604255}
+  playerManager: {fileID: 0}
+  repairMovable: {fileID: 8461690936898680769}
+--- !u!50 &4805142254157109550
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519949417277533157}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2519949417349636633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,7 +1164,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Left Button
+  m_Text: Push
 --- !u!1 &2519949417556785859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,6 +1176,7 @@ GameObject:
   - component: {fileID: 2519949417556785868}
   - component: {fileID: 2519949417556785869}
   - component: {fileID: 2519949417556785870}
+  - component: {fileID: 667463583750042628}
   m_Layer: 2
   m_Name: Left
   m_TagString: Untagged
@@ -1168,6 +1241,29 @@ MonoBehaviour:
   obstacleLeft: 0
   obstacleRight: 0
   rightCollider: {fileID: 2519949416785682213}
+  playerManager: {fileID: 0}
+  repairMovable: {fileID: 8461690936898680769}
+--- !u!50 &667463583750042628
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519949417556785859}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2519949417995847372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,7 +1341,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Up Button
+  m_Text: Push
 --- !u!1 &2519949418080492106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,7 +1748,7 @@ PrefabInstance:
     - target: {fileID: 5395669720260672993, guid: e16bca653e3ce4e42a829ad6f4de9b83,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5395669720260672993, guid: e16bca653e3ce4e42a829ad6f4de9b83,
         type: 3}

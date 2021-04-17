@@ -23,14 +23,15 @@ public class RepairMovableBlock : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     public GameObject player;
-    private PlayerController playerController;
+
+    private BoxCollider2D movableBlockCollider;
 
 
     void Start()
     {
         repairButton.gameObject.SetActive(false);
         spriteRenderer = movableBlock.GetComponent<SpriteRenderer>();
-        playerController = player.GetComponent<PlayerController>();        
+        movableBlockCollider = GetComponentInParent<BoxCollider2D>();
     }
 
     
@@ -44,22 +45,10 @@ public class RepairMovableBlock : MonoBehaviour
             rightTrigger.enabled = false;
 
             spriteRenderer.sprite = brokenSprite;
-        }
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (isBroken == true && playerController.blue == true)
-        {
-            repairButton.gameObject.SetActive(true);
+            movableBlockCollider.enabled = false;
         }
-        
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        repairButton.gameObject.SetActive(false);
-    }
+    }    
 
     public void RepairBlock()
     {        
@@ -71,6 +60,8 @@ public class RepairMovableBlock : MonoBehaviour
         rightTrigger.enabled = true;
 
         isBroken = false;
+
+        movableBlockCollider.enabled = true;
 
         repairButton.gameObject.SetActive(false);
     }

@@ -7,13 +7,13 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
 
-    public GameObject[] characters;
+    public List <GameObject> characters = new List<GameObject>();
 
     public GameObject currentCharacter;
 
     void Start()
     {
-        for (int i = 0; i < characters.Length; i++)
+        for (int i = 0; i < characters.Count; i++)
         {
             characters[i].GetComponent<PlayerMovement>().enabled = false;
         }

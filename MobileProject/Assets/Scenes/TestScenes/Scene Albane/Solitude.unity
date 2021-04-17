@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1218536680}
 --- !u!61 &42066524
 BoxCollider2D:
@@ -2047,7 +2047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1436712250}
 --- !u!61 &103932432
 BoxCollider2D:
@@ -3056,7 +3056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 670040293}
 --- !u!61 &169054891
 BoxCollider2D:
@@ -3129,7 +3129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 778096524}
 --- !u!61 &178386883
 BoxCollider2D:
@@ -3272,7 +3272,7 @@ Transform:
   m_Children:
   - {fileID: 1955608632}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &189809469
 GameObject:
@@ -3547,7 +3547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 973643279}
 --- !u!61 &190799409
 BoxCollider2D:
@@ -3835,7 +3835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1386317594}
 --- !u!61 &206453150
 BoxCollider2D:
@@ -3908,7 +3908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1747919398}
 --- !u!61 &207082713
 BoxCollider2D:
@@ -3981,7 +3981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1347883847}
 --- !u!61 &222790425
 BoxCollider2D:
@@ -4132,7 +4132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 670040293}
 --- !u!61 &228739590
 BoxCollider2D:
@@ -4699,7 +4699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1862701730}
 --- !u!61 &257915882
 BoxCollider2D:
@@ -4847,7 +4847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 670040293}
 --- !u!61 &266060029
 BoxCollider2D:
@@ -4920,7 +4920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 887588989}
 --- !u!61 &280376520
 BoxCollider2D:
@@ -5028,7 +5028,7 @@ Transform:
   m_LocalScale: {x: 0.1532588, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &284588558
 BoxCollider2D:
@@ -5101,7 +5101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 321423954}
 --- !u!61 &292686912
 BoxCollider2D:
@@ -5331,7 +5331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 973643279}
 --- !u!61 &304270945
 BoxCollider2D:
@@ -5617,7 +5617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1386317594}
 --- !u!61 &330103298
 BoxCollider2D:
@@ -5970,7 +5970,7 @@ PrefabInstance:
     - target: {fileID: 4112802118508544839, guid: 9ab99ebbc0671c64989c609e48850eb9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4112802118508544839, guid: 9ab99ebbc0671c64989c609e48850eb9,
         type: 3}
@@ -6049,7 +6049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 552208647}
 --- !u!61 &339815332
 BoxCollider2D:
@@ -6161,7 +6161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1747919398}
 --- !u!61 &344398652
 BoxCollider2D:
@@ -6234,7 +6234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 247150068}
 --- !u!61 &347041627
 BoxCollider2D:
@@ -6385,7 +6385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1744074561}
 --- !u!61 &375719311
 BoxCollider2D:
@@ -6458,7 +6458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1218536680}
 --- !u!61 &378751458
 BoxCollider2D:
@@ -6711,7 +6711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 552208647}
 --- !u!61 &400519537
 BoxCollider2D:
@@ -6768,7 +6768,7 @@ Transform:
   m_LocalScale: {x: 1.3333335, y: 1.3333335, z: 1}
   m_Children: []
   m_Father: {fileID: 2010815064}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &417110236
 MonoBehaviour:
@@ -7005,7 +7005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1139826968}
 --- !u!61 &433523414
 BoxCollider2D:
@@ -7161,7 +7161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 973643279}
 --- !u!61 &444167238
 BoxCollider2D:
@@ -7204,7 +7204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &459886410
 Transform:
   m_ObjectHideFlags: 0
@@ -7271,7 +7271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 2058313156}
 --- !u!61 &462452911
 BoxCollider2D:
@@ -7614,7 +7614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1436712250}
 --- !u!61 &527648212
 BoxCollider2D:
@@ -7687,7 +7687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 321423954}
 --- !u!61 &530531125
 BoxCollider2D:
@@ -7945,7 +7945,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &546302251
 MonoBehaviour:
@@ -8003,7 +8003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &549469768
 Transform:
   m_ObjectHideFlags: 0
@@ -8498,7 +8498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &580455579
 Transform:
   m_ObjectHideFlags: 0
@@ -8562,7 +8562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 886060068}
 --- !u!61 &581442691
 BoxCollider2D:
@@ -8713,7 +8713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 778096524}
 --- !u!61 &595417490
 BoxCollider2D:
@@ -9239,7 +9239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 601068660}
 --- !u!61 &623694093
 BoxCollider2D:
@@ -9574,7 +9574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1744074561}
 --- !u!61 &658681915
 BoxCollider2D:
@@ -9730,7 +9730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1305429162}
 --- !u!61 &668022479
 BoxCollider2D:
@@ -9939,7 +9939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1988987187}
 --- !u!61 &674768250
 BoxCollider2D:
@@ -10205,7 +10205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1305429162}
 --- !u!61 &703223022
 BoxCollider2D:
@@ -10276,7 +10276,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &714190028
 GameObject:
@@ -10323,7 +10323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1744074561}
 --- !u!61 &714190031
 BoxCollider2D:
@@ -10396,7 +10396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1386317594}
 --- !u!61 &719715589
 BoxCollider2D:
@@ -10547,7 +10547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1584919814}
 --- !u!61 &727236575
 BoxCollider2D:
@@ -10620,7 +10620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1436712250}
 --- !u!61 &735570763
 BoxCollider2D:
@@ -11066,7 +11066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1204174545}
 --- !u!61 &770119697
 BoxCollider2D:
@@ -11350,7 +11350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1218536680}
 --- !u!61 &792889929
 BoxCollider2D:
@@ -11611,7 +11611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 887588989}
 --- !u!61 &827099561
 BoxCollider2D:
@@ -11737,7 +11737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &838927587
 Transform:
   m_ObjectHideFlags: 0
@@ -11872,7 +11872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 778096524}
 --- !u!61 &845565063
 BoxCollider2D:
@@ -12278,7 +12278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 738886512}
 --- !u!61 &889593364
 BoxCollider2D:
@@ -12757,7 +12757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 886060068}
 --- !u!61 &913383414
 BoxCollider2D:
@@ -13098,7 +13098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &917781647
 Transform:
   m_ObjectHideFlags: 0
@@ -13345,7 +13345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1499483503}
 --- !u!61 &940929467
 BoxCollider2D:
@@ -13679,7 +13679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 601068660}
 --- !u!61 &963889981
 BoxCollider2D:
@@ -14101,7 +14101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 887588989}
 --- !u!61 &975053745
 BoxCollider2D:
@@ -14174,7 +14174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1747919398}
 --- !u!61 &983540847
 BoxCollider2D:
@@ -14286,7 +14286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1347883847}
 --- !u!61 &992938054
 BoxCollider2D:
@@ -14359,12 +14359,12 @@ PrefabInstance:
     - target: {fileID: 549410234776507887, guid: 87fc272d1c90d944db78e6f606d25fe7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.57
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 549410234776507887, guid: 87fc272d1c90d944db78e6f606d25fe7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.58
+      value: 7.55
       objectReference: {fileID: 0}
     - target: {fileID: 549410234776507887, guid: 87fc272d1c90d944db78e6f606d25fe7,
         type: 3}
@@ -14394,7 +14394,7 @@ PrefabInstance:
     - target: {fileID: 549410234776507887, guid: 87fc272d1c90d944db78e6f606d25fe7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 549410234776507887, guid: 87fc272d1c90d944db78e6f606d25fe7,
         type: 3}
@@ -14776,7 +14776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 738886512}
 --- !u!61 &1040829010
 BoxCollider2D:
@@ -14967,7 +14967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1928158997}
 --- !u!61 &1047046138
 BoxCollider2D:
@@ -15040,7 +15040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 552208647}
 --- !u!61 &1056263222
 BoxCollider2D:
@@ -15805,7 +15805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1928158997}
 --- !u!61 &1074491948
 BoxCollider2D:
@@ -16580,7 +16580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1305429162}
 --- !u!61 &1116787953
 BoxCollider2D:
@@ -16659,7 +16659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 552208647}
 --- !u!61 &1129838700
 BoxCollider2D:
@@ -16732,7 +16732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 247150068}
 --- !u!61 &1132871483
 BoxCollider2D:
@@ -17250,7 +17250,7 @@ PrefabInstance:
     - target: {fileID: 4112802118508544839, guid: 9ab99ebbc0671c64989c609e48850eb9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4112802118508544839, guid: 9ab99ebbc0671c64989c609e48850eb9,
         type: 3}
@@ -17376,7 +17376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1988987187}
 --- !u!61 &1182232552
 BoxCollider2D:
@@ -17759,7 +17759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1558010875}
 --- !u!61 &1208091964
 BoxCollider2D:
@@ -18449,7 +18449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 601068660}
 --- !u!61 &1239065161
 BoxCollider2D:
@@ -18522,7 +18522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1499483503}
 --- !u!61 &1242161482
 BoxCollider2D:
@@ -18775,7 +18775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1744074561}
 --- !u!61 &1292046914
 BoxCollider2D:
@@ -19163,7 +19163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1862701730}
 --- !u!61 &1300172339
 BoxCollider2D:
@@ -19317,7 +19317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1499483503}
 --- !u!61 &1304146330
 BoxCollider2D:
@@ -19547,7 +19547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1928158997}
 --- !u!61 &1306035856
 BoxCollider2D:
@@ -19684,7 +19684,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1323044887
 GameObject:
@@ -20291,7 +20291,7 @@ PrefabInstance:
     - target: {fileID: 4112802118508544839, guid: 9ab99ebbc0671c64989c609e48850eb9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4112802118508544839, guid: 9ab99ebbc0671c64989c609e48850eb9,
         type: 3}
@@ -20544,7 +20544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1584919814}
 --- !u!61 &1351339301
 BoxCollider2D:
@@ -20763,7 +20763,7 @@ Transform:
   m_Children:
   - {fileID: 189809470}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1376472213
 GameObject:
@@ -20845,7 +20845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1139826968}
 --- !u!61 &1378515597
 BoxCollider2D:
@@ -20996,7 +20996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1227157214}
 --- !u!61 &1381381086
 BoxCollider2D:
@@ -21660,7 +21660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 2058313156}
 --- !u!61 &1416969082
 BoxCollider2D:
@@ -21733,7 +21733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 247150068}
 --- !u!61 &1417630853
 BoxCollider2D:
@@ -21986,7 +21986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1139826968}
 --- !u!61 &1428341086
 BoxCollider2D:
@@ -22059,7 +22059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1584919814}
 --- !u!61 &1429277465
 BoxCollider2D:
@@ -22215,7 +22215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 738886512}
 --- !u!61 &1434947623
 BoxCollider2D:
@@ -23076,7 +23076,7 @@ Transform:
   m_Children:
   - {fileID: 84612559}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1514812220
 GameObject:
@@ -23307,7 +23307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 2058313156}
 --- !u!61 &1521770145
 BoxCollider2D:
@@ -23380,7 +23380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 886060068}
 --- !u!61 &1524566469
 BoxCollider2D:
@@ -23524,7 +23524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1305429162}
 --- !u!61 &1529501504
 BoxCollider2D:
@@ -23744,7 +23744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1204174545}
 --- !u!61 &1541370969
 BoxCollider2D:
@@ -24332,7 +24332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1218536680}
 --- !u!61 &1581148552
 BoxCollider2D:
@@ -24535,7 +24535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 670040293}
 --- !u!61 &1585039059
 BoxCollider2D:
@@ -24608,7 +24608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1558010875}
 --- !u!61 &1590785640
 BoxCollider2D:
@@ -24681,7 +24681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 321423954}
 --- !u!61 &1599708386
 BoxCollider2D:
@@ -24971,7 +24971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1139826968}
 --- !u!61 &1630207498
 BoxCollider2D:
@@ -25290,7 +25290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 321423954}
 --- !u!61 &1668749280
 BoxCollider2D:
@@ -25363,7 +25363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1227157214}
 --- !u!61 &1684585019
 BoxCollider2D:
@@ -25436,7 +25436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1227157214}
 --- !u!61 &1685774326
 BoxCollider2D:
@@ -25544,7 +25544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1436712250}
 --- !u!61 &1703108658
 BoxCollider2D:
@@ -25652,7 +25652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1204174545}
 --- !u!61 &1709724908
 BoxCollider2D:
@@ -25798,7 +25798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 778096524}
 --- !u!61 &1711181991
 BoxCollider2D:
@@ -25956,85 +25956,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1713631193}
   m_CullTransparentMesh: 0
---- !u!1001 &1714743559
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2519949416766604255, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: playerManager
-      value: 
-      objectReference: {fileID: 106507967}
-    - target: {fileID: 2519949417277533152, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: playerManager
-      value: 
-      objectReference: {fileID: 106507967}
-    - target: {fileID: 2519949418083805707, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519949418083805707, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519949418083805707, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519949418083805707, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519949418083805707, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519949418083805707, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519949418083805707, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519949418083805707, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519949418083805707, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519949418083805707, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519949418083805707, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519949418083805711, guid: 9952f2ee2f4e28a41af578314610d012,
-        type: 3}
-      propertyPath: m_Name
-      value: MovableObject
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9952f2ee2f4e28a41af578314610d012, type: 3}
 --- !u!1 &1716186558
 GameObject:
   m_ObjectHideFlags: 0
@@ -26080,7 +26001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1862701730}
 --- !u!61 &1716186561
 BoxCollider2D:
@@ -26153,7 +26074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 886060068}
 --- !u!61 &1719306550
 BoxCollider2D:
@@ -26484,7 +26405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 2058313156}
 --- !u!61 &1740495800
 BoxCollider2D:
@@ -26892,7 +26813,7 @@ Transform:
   m_Children:
   - {fileID: 75941678}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1753520476
 GameObject:
@@ -27010,7 +26931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1747919398}
 --- !u!61 &1754646709
 BoxCollider2D:
@@ -27166,7 +27087,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1773750210
 Transform:
   m_ObjectHideFlags: 0
@@ -27622,7 +27543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 247150068}
 --- !u!61 &1812689256
 BoxCollider2D:
@@ -27710,7 +27631,7 @@ PrefabInstance:
     - target: {fileID: 2295171064153050348, guid: 927e9432932ecb845812c80a9e71e25e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2295171064153050348, guid: 927e9432932ecb845812c80a9e71e25e,
         type: 3}
@@ -28001,7 +27922,7 @@ PrefabInstance:
     - target: {fileID: 413343395015685019, guid: e5175ac82aca37c4b91f9af750a41499,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 413343395015685019, guid: e5175ac82aca37c4b91f9af750a41499,
         type: 3}
@@ -28065,7 +27986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 601068660}
 --- !u!61 &1854865646
 BoxCollider2D:
@@ -28138,7 +28059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1928158997}
 --- !u!61 &1855518016
 BoxCollider2D:
@@ -28577,12 +28498,12 @@ PrefabInstance:
     - target: {fileID: 922990593996337321, guid: dd2e0aee4aef7c643887055c5d9fd78a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.68
+      value: 7.491
       objectReference: {fileID: 0}
     - target: {fileID: 922990593996337321, guid: dd2e0aee4aef7c643887055c5d9fd78a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1
+      value: 0.51
       objectReference: {fileID: 0}
     - target: {fileID: 922990593996337321, guid: dd2e0aee4aef7c643887055c5d9fd78a,
         type: 3}
@@ -28612,7 +28533,7 @@ PrefabInstance:
     - target: {fileID: 922990593996337321, guid: dd2e0aee4aef7c643887055c5d9fd78a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 922990593996337321, guid: dd2e0aee4aef7c643887055c5d9fd78a,
         type: 3}
@@ -28711,7 +28632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1204174545}
 --- !u!61 &1873343928
 BoxCollider2D:
@@ -28829,7 +28750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1227157214}
 --- !u!61 &1887848816
 BoxCollider2D:
@@ -28902,7 +28823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1386317594}
 --- !u!61 &1895838835
 BoxCollider2D:
@@ -28975,7 +28896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1988987187}
 --- !u!61 &1903989939
 BoxCollider2D:
@@ -29048,7 +28969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1584919814}
 --- !u!61 &1919682981
 BoxCollider2D:
@@ -29329,7 +29250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1988987187}
 --- !u!61 &1930703669
 BoxCollider2D:
@@ -29485,7 +29406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1499483503}
 --- !u!61 &1939768666
 BoxCollider2D:
@@ -30198,7 +30119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1987327792
 Transform:
   m_ObjectHideFlags: 0
@@ -30732,7 +30653,7 @@ RectTransform:
   - {fileID: 2058200710}
   - {fileID: 259834612}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -30796,7 +30717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1558010875}
 --- !u!61 &2012853947
 BoxCollider2D:
@@ -30859,7 +30780,7 @@ Transform:
   - {fileID: 917781647}
   - {fileID: 627943795}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2022314082
 GameObject:
@@ -31107,7 +31028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1347883847}
 --- !u!61 &2038538386
 BoxCollider2D:
@@ -31391,7 +31312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 887588989}
 --- !u!61 &2059239131
 BoxCollider2D:
@@ -31503,7 +31424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1862701730}
 --- !u!61 &2067940162
 BoxCollider2D:
@@ -31615,7 +31536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1347883847}
 --- !u!61 &2092317623
 BoxCollider2D:
@@ -31787,7 +31708,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2120710028
 GameObject:
@@ -31905,7 +31826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 738886512}
 --- !u!61 &2127975884
 BoxCollider2D:
@@ -31978,7 +31899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 973643279}
 --- !u!61 &2132895087
 BoxCollider2D:
@@ -32051,7 +31972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 106507967}
-  player: {fileID: 0}
+  player: {fileID: 2010815059}
   RepairButton: {fileID: 1558010875}
 --- !u!61 &2139408738
 BoxCollider2D:
@@ -32197,6 +32118,11 @@ PrefabInstance:
       propertyPath: RepairButton
       value: 
       objectReference: {fileID: 542131599}
+    - target: {fileID: 6721952321497366756, guid: 410da57c0d5294e49872b9ae17b7e6e2,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2010815059}
     - target: {fileID: 6721952321587486161, guid: 410da57c0d5294e49872b9ae17b7e6e2,
         type: 3}
       propertyPath: playerManager
@@ -32207,6 +32133,11 @@ PrefabInstance:
       propertyPath: RepairButton
       value: 
       objectReference: {fileID: 542131599}
+    - target: {fileID: 6721952321587486161, guid: 410da57c0d5294e49872b9ae17b7e6e2,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2010815059}
     - target: {fileID: 6721952321695227389, guid: 410da57c0d5294e49872b9ae17b7e6e2,
         type: 3}
       propertyPath: playerManager
@@ -32217,6 +32148,11 @@ PrefabInstance:
       propertyPath: RepairButton
       value: 
       objectReference: {fileID: 542131599}
+    - target: {fileID: 6721952321695227389, guid: 410da57c0d5294e49872b9ae17b7e6e2,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2010815059}
     - target: {fileID: 6721952322581271677, guid: 410da57c0d5294e49872b9ae17b7e6e2,
         type: 3}
       propertyPath: m_Name
@@ -32292,5 +32228,10 @@ PrefabInstance:
       propertyPath: RepairButton
       value: 
       objectReference: {fileID: 542131599}
+    - target: {fileID: 6721952322924782173, guid: 410da57c0d5294e49872b9ae17b7e6e2,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2010815059}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 410da57c0d5294e49872b9ae17b7e6e2, type: 3}

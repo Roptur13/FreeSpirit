@@ -11,13 +11,18 @@ public class RightCollider : MonoBehaviour
     public bool obstacleRight;
     public bool obstacleLeft;
     public LeftCollider leftCollider;
+    public PlayerManager playerManager;
+    public RepairMovableBlock repairMovable;
 
     private bool rightMove;
     private Vector3 voidVelocity;
 
+    private List<GameObject> characters;
+
     void Start()
     {
         rightButton.gameObject.SetActive(false);
+        characters = playerManager.characters;
     }
 
     private void Update()
@@ -36,31 +41,81 @@ public class RightCollider : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if ((collision.gameObject.layer == LayerMask.NameToLayer("YellowChara") || collision.gameObject.layer == LayerMask.NameToLayer("BlueChara") || collision.gameObject.layer == LayerMask.NameToLayer("RedChara")) && obstacleLeft == false)
+        if (characters.Contains(collision.gameObject))
         {
-            rightButton.gameObject.SetActive(true);
+            collision.gameObject.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.NeverSleep;
+
+            if (collision.gameObject == playerManager.currentCharacter)
+            {
+                if (obstacleLeft == false)
+                {
+                    rightButton.gameObject.SetActive(true);
+                }
+                else
+                {
+                    rightButton.gameObject.SetActive(false);
+                }
+
+                if (repairMovable.isBroken == true)
+                {
+                    if (collision.gameObject == repairMovable.player)
+                    {
+                        repairMovable.repairButton.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        repairMovable.repairButton.gameObject.SetActive(false);
+                    }
+                }
+                else
+                {
+                    repairMovable.repairButton.gameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                obstacleRight = true;
+                rightButton.gameObject.SetActive(false);
+            }
+
         }
-        else if ((collision.gameObject.layer != LayerMask.NameToLayer("YellowChara") && collision.gameObject.layer != LayerMask.NameToLayer("BlueChara") && collision.gameObject.layer != LayerMask.NameToLayer("RedChara")))
+        else
         {
-            obstacleRight = true;
-        }
-        
-        if (obstacleLeft == true)
-        {
-            rightButton.gameObject.SetActive(false);
+            if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                obstacleRight = true;
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer != LayerMask.NameToLayer("YellowChara"))
+        if (characters.Contains(collision.gameObject))
         {
-            obstacleRight = false;
-        }
+            collision.gameObject.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.StartAwake;
 
-        rightButton.gameObject.SetActive(false);
+            if (collision.gameObject == playerManager.currentCharacter)
+            {
+                rightButton.gameObject.SetActive(false);
+            }
+
+            if (repairMovable.isBroken == true)
+            {
+                if (collision.gameObject == repairMovable.player)
+                {
+                    repairMovable.repairButton.gameObject.SetActive(false);
+                }
+            }
+        }
+        else
+        {
+            if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                obstacleRight = false;
+            }
+        }
     }
 
     public void RightMove()

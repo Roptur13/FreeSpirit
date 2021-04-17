@@ -12,13 +12,16 @@ public class BotCollider : MonoBehaviour
     public bool obstacleTop;
     public TopCollider topCollider;
     public PlayerManager playerManager;
+    public RepairMovableBlock repairMovable;
 
     private bool botMove;
     private Vector3 voidVelocity;
+    private List<GameObject> characters;
 
     void Start()
     {
         botButton.gameObject.SetActive(false);
+        characters = playerManager.characters;
     }
 
     private void Update()
@@ -39,31 +42,71 @@ public class BotCollider : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject == playerManager.currentCharacter)
+        if (characters.Contains(collision.gameObject))
         {
-            if (obstacleTop == false)
+            collision.gameObject.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.NeverSleep;
+
+            if (collision.gameObject == playerManager.currentCharacter)
             {
-                botButton.gameObject.SetActive(true);
+                if (obstacleTop == false)
+                {
+                    botButton.gameObject.SetActive(true);
+                }
+                else
+                {
+                    botButton.gameObject.SetActive(false);
+                }
+
+                if (repairMovable.isBroken == true)
+                {
+                    if (collision.gameObject == repairMovable.player)
+                    {
+                        repairMovable.repairButton.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        repairMovable.repairButton.gameObject.SetActive(false);
+                    }
+                }
+                else
+                {
+                    repairMovable.repairButton.gameObject.SetActive(false);
+                }
             }
             else
             {
+                obstacleBot = true;
                 botButton.gameObject.SetActive(false);
             }
+
         }
         else
         {
             if (collision.gameObject.CompareTag("Obstacle"))
             {
                 obstacleBot = true;
-            }            
-        }        
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject == playerManager.currentCharacter)
+        if (characters.Contains(collision.gameObject))
         {
-            botButton.gameObject.SetActive(false);
+            collision.gameObject.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.StartAwake;
+
+            if (collision.gameObject == playerManager.currentCharacter)
+            {
+                botButton.gameObject.SetActive(false);
+            }
+
+            if (repairMovable.isBroken == true)
+            {
+                if (collision.gameObject == repairMovable.player)
+                {
+                    repairMovable.repairButton.gameObject.SetActive(false);
+                }
+            }
         }
         else
         {
@@ -71,8 +114,8 @@ public class BotCollider : MonoBehaviour
             {
                 obstacleBot = false;
             }
-        }        
-        
+        }
+
     }
 
     public void BotMove()

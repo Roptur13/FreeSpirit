@@ -12,14 +12,18 @@ public class TopCollider : MonoBehaviour
     public bool obstacleBot;
     public BotCollider botCollider;
     public PlayerManager playerManager;
-    private bool characterDetected;
+    public RepairMovableBlock repairMovable;
+
 
     private bool topMove;
     private Vector3 voidVelocity;
 
+    private List<GameObject> characters;
+
     void Start()
     {
         upButton.gameObject.SetActive(false);
+        characters = playerManager.characters;
     }
 
     private void Update()
@@ -42,16 +46,43 @@ public class TopCollider : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if ()
+        if (characters.Contains(collision.gameObject))
         {
-            if (obstacleBot == false)
+            collision.gameObject.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.NeverSleep;
+
+            if (collision.gameObject == playerManager.currentCharacter)
             {
-                upButton.gameObject.SetActive(true);
+                if (obstacleBot == false)
+                {
+                    upButton.gameObject.SetActive(true);
+                }
+                else
+                {
+                    upButton.gameObject.SetActive(false);
+                }
+
+                if (repairMovable.isBroken == true)
+                {
+                    if (collision.gameObject == repairMovable.player)
+                    {
+                        repairMovable.repairButton.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        repairMovable.repairButton.gameObject.SetActive(false);
+                    }
+                }
+                else
+                {
+                    repairMovable.repairButton.gameObject.SetActive(false);
+                }
             }
             else
             {
+                obstacleTop = true;
                 upButton.gameObject.SetActive(false);
             }
+
         }
         else
         {
@@ -64,9 +95,22 @@ public class TopCollider : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject == playerManager.currentCharacter)
+        if (characters.Contains(collision.gameObject))
         {
-            upButton.gameObject.SetActive(false);
+            collision.gameObject.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.StartAwake;
+
+            if (collision.gameObject == playerManager.currentCharacter)
+            {
+                upButton.gameObject.SetActive(false);
+            }
+
+            if (repairMovable.isBroken == true)
+            {
+                if (collision.gameObject == repairMovable.player)
+                {
+                    repairMovable.repairButton.gameObject.SetActive(false);
+                }
+            }
         }
         else
         {
