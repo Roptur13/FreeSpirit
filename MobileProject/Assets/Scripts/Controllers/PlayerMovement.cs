@@ -38,8 +38,8 @@ public class PlayerMovement : MonoBehaviour
             canMove = true;
             previousPosition = transform.position;
 
-            //animValueX = 0f;
-            //animValue = 0f;
+            animValueX = 0f;
+            animValueY = 0f;
         }
         else
         {

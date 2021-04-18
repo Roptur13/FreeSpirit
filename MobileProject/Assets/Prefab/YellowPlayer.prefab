@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 549410234776507885}
   - component: {fileID: 549410234776507873}
   - component: {fileID: 9214199679093441316}
+  - component: {fileID: -2783024078401980275}
   m_Layer: 15
   m_Name: YellowPlayer
   m_TagString: Obstacle
@@ -114,7 +115,29 @@ MonoBehaviour:
   moveSpeed: 10
   canMove: 0
   isJumping: 0
+  swipe: {fileID: 0}
+  animValueX: 0
+  animValueY: 0
   previousPosition: {x: 0, y: 0, z: 0}
+--- !u!95 &-2783024078401980275
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549410234776507884}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &549410236424979611
 GameObject:
   m_ObjectHideFlags: 0

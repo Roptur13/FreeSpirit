@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WinColliderScript : MonoBehaviour
 {
@@ -10,9 +11,12 @@ public class WinColliderScript : MonoBehaviour
 
     private int charactersArrived;
 
+    public Button hubButton;
+
     void Start()
     {
         winScreen.SetActive(false);
+        hubButton.gameObject.SetActive(false);
     }
 
     void Update()
@@ -20,6 +24,7 @@ public class WinColliderScript : MonoBehaviour
         if (charactersArrived == charactersNumber)
         {
             winScreen.SetActive(true);
+            hubButton.gameObject.SetActive(true);
         }
         
     }

@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 6460914028122581912}
   - component: {fileID: 6460914028122581908}
   - component: {fileID: 1235517628541424634}
+  - component: {fileID: 1221424415230665492}
   m_Layer: 11
   m_Name: RedPlayer
   m_TagString: Obstacle
@@ -207,4 +208,27 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   moveSpeed: 10
   canMove: 0
+  isJumping: 0
+  swipe: {fileID: 0}
+  animValueX: 0
+  animValueY: 0
   previousPosition: {x: 0, y: 0, z: 0}
+--- !u!95 &1221424415230665492
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460914028122581913}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
