@@ -68,5 +68,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         targetPosition = previousPosition;
+        animValueX = -animValueX;
+        animValueY = -animValueY;
     }
 }
