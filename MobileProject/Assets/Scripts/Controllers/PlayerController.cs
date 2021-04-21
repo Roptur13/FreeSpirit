@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     public bool red;
     public bool yellow;
 
-
     private void OnMouseDown()
     {
         playerManager.ChangeCharacter(this.gameObject);

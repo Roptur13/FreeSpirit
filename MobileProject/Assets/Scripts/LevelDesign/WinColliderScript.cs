@@ -25,8 +25,7 @@ public class WinColliderScript : MonoBehaviour
         {
             winScreen.SetActive(true);
             hubButton.gameObject.SetActive(true);
-        }
-        
+        }        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,5 +42,11 @@ public class WinColliderScript : MonoBehaviour
         {
             charactersArrived--;
         }
+    }
+
+    public void SaveThisLevel()
+    {
+        SaveSystem.SaveFinishedLevel();
+        Debug.Log(PlayerPrefs.GetInt("Last Level Finished"));
     }
 }

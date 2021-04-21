@@ -38,6 +38,7 @@ public class RepairePlatform : MonoBehaviour
     void Start()
     {
         repairButton.gameObject.SetActive(false);
+        spriteRenderer = Platform.GetComponent<SpriteRenderer>();
     }
 
 
