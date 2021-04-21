@@ -8,7 +8,7 @@ public class DestructibleWall : MonoBehaviour
 {
     public GameObject player;
     public Button destroyButton;
-    private PlayerController playerController;
+    public PlayerManager playerManager;
 
     [SerializeField]
     private float distance;
@@ -16,7 +16,6 @@ public class DestructibleWall : MonoBehaviour
     void Start()
     {
         destroyButton.gameObject.SetActive(false);
-        playerController = player.GetComponent<PlayerController>();
     }
 
     
@@ -24,7 +23,7 @@ public class DestructibleWall : MonoBehaviour
     {
         distance = Vector3.Distance(player.transform.position, transform.position);
         
-        if(distance<=1.2f && playerController.red == true)
+        if(distance<=1.8f && player == playerManager.currentCharacter)
         {
             destroyButton.gameObject.SetActive(true);
         }

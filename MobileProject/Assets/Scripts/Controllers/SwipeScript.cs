@@ -12,19 +12,34 @@ public class SwipeScript : MonoBehaviour
     private bool fingerDown;
     public int pixelDistToDetect = 20;
     public GameObject currentCharacter;
-    public PlayerMovement movement;
+    public List<PlayerMovement> movement = new List<PlayerMovement>();
     public int distance;
 
     public int swipeCount = 0;
 
-    
+    private void Start()
+    {
+        if(playerManager.sameMovements == true)
+        {
+            for (int i = 0; i < playerManager.characters.Count; i++)
+            {
+                movement.Add(playerManager.characters[i].GetComponent<PlayerMovement>());                
+            }
+            movement.RemoveAt(0);
+        }
+    }
+
     void Update()
     {
         SwipeDetection();
 
         currentCharacter = playerManager.currentCharacter;
-        movement = currentCharacter.GetComponent<PlayerMovement>();
-        
+
+        if (playerManager.sameMovements == false)
+        {
+            movement[0] = currentCharacter.GetComponent<PlayerMovement>();
+        }     
+          
     }
 
     void SwipeDetection()
@@ -45,35 +60,54 @@ public class SwipeScript : MonoBehaviour
             if(Input.touches[0].position.y >= startposition.y + pixelDistToDetect) //swipe haut
             {
                 fingerDown = false;
-                movement.Move(Vector3.up * distance);
+
+                for (int i = 0; i < movement.Count; i++)
+                {
+                    movement[i].Move(Vector3.up * distance);
+                    movement[i].animValueX = 0f;
+                    movement[i].animValueY = 0.5f;
+                }                
+
                 swipeCount = swipeCount + 1;
-                movement.animValueX = 0f;
-                movement.animValueY = 0.5f;
-                
             }
             else if(Input.touches[0].position.x <= startposition.x - pixelDistToDetect) //swipe gauche
             {
                 fingerDown = false;
-                movement.Move(Vector3.left * distance);
+
+                for (int i = 0; i < movement.Count; i++)
+                {
+                    movement[i].Move(Vector3.left * distance);
+                    movement[i].animValueX = -0.5f;
+                    movement[i].animValueY = 0f;
+                }                
+
                 swipeCount = swipeCount + 1;
-                movement.animValueX = -0.5f;
-                movement.animValueY = 0f;
             }
             else if (Input.touches[0].position.x >= startposition.x + pixelDistToDetect) //swipe droit
             {
                 fingerDown = false;
-                movement.Move(Vector3.right * distance);
+
+                for (int i = 0; i < movement.Count; i++)
+                {
+                    movement[i].Move(Vector3.right * distance);
+                    movement[i].animValueX = 0.5f;
+                    movement[i].animValueY = 0f;
+                }                
+
                 swipeCount = swipeCount + 1;
-                movement.animValueX = 0.5f;
-                movement.animValueY = 0f;
             }
             else if (Input.touches[0].position.y <= startposition.y - pixelDistToDetect) //swipe bas
             {
                 fingerDown = false;
-                movement.Move(Vector3.down * distance);
+
+                for (int i = 0; i < movement.Count; i++)
+                {
+                    movement[i].Move(Vector3.down * distance);
+                    movement[i].animValueX = 0f;
+                    movement[i].animValueY = -0.5f;
+                }                
+
                 swipeCount = swipeCount + 1;
-                movement.animValueX = 0f;
-                movement.animValueY = -0.5f;
             }
 
             if (fingerDown && Input.GetMouseButtonUp(0))

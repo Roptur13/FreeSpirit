@@ -11,11 +11,16 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject currentCharacter;
 
+    public bool sameMovements;
+
     void Start()
     {
         for (int i = 0; i < characters.Count; i++)
         {
-            characters[i].GetComponent<PlayerMovement>().enabled = false;
+            if (sameMovements == false)
+            {
+                characters[i].GetComponent<PlayerMovement>().enabled = false;
+            }            
         }
 
         currentCharacter = characters[0];
@@ -23,7 +28,10 @@ public class PlayerManager : MonoBehaviour
 
     public void ChangeCharacter(GameObject player)
     {
-        currentCharacter.GetComponent<PlayerMovement>().enabled = false;
+        if (sameMovements == false)
+        {
+            currentCharacter.GetComponent<PlayerMovement>().enabled = false;
+        }
         currentCharacter = player;
         
     }

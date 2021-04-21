@@ -5,9 +5,7 @@ using UnityEngine;
 //Script de Noé
 
 public class PlayerMovement : MonoBehaviour
-{
-    [SerializeField]
-    public Vector3 targetPosition;
+{  
 
     public float moveSpeed;
     public bool canMove;
@@ -22,13 +20,15 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     public Vector3 previousPosition;
-    
+
+    [SerializeField]
+    public Vector3 targetPosition;
+
     void Start()
     {
         targetPosition = transform.position;
         isJumping = false;
-        animator = GetComponent<Animator>();
-        
+        animator = GetComponent<Animator>();        
     }
     
     void Update()
@@ -53,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Move Y", animValueY);
         }
         
-        //Debug.Log(isJumping);
     }
 
     public void Move(Vector3 movementDirection)
@@ -61,7 +60,6 @@ public class PlayerMovement : MonoBehaviour
         if (canMove == true)
         {
             targetPosition += movementDirection;
-            //Debug.Log(targetPosition);
         }        
     }
 

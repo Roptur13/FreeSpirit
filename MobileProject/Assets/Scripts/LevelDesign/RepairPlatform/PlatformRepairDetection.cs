@@ -8,18 +8,10 @@ public class PlatformRepairDetection : MonoBehaviour
     public PlayerManager playerManager;
     public GameObject player;
     public Button RepairButton;
-    private PlayerController playerController;
-
     
     void Start()
     {        
         RepairButton.gameObject.SetActive(false);
-    }
-
-    void Update()
-    {
-        
-        playerController = player.GetComponent<PlayerController>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)

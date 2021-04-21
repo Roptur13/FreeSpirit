@@ -23,8 +23,6 @@ public class RepairePlatform : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     public GameObject player;
-    private PlayerController playerController;
-
     
     public GameObject SwipeManager;
     public int swipeCount;
@@ -40,8 +38,6 @@ public class RepairePlatform : MonoBehaviour
     void Start()
     {
         repairButton.gameObject.SetActive(false);
-        spriteRenderer = Platform.GetComponent<SpriteRenderer>();
-        playerController = player.GetComponent<PlayerController>();
     }
 
 
