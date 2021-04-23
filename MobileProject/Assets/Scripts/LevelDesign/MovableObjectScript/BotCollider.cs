@@ -14,6 +14,8 @@ public class BotCollider : MonoBehaviour
     public PlayerManager playerManager;
     public RepairMovableBlock repairMovable;
 
+    public BotCollider linkedBlock;
+
     private bool botMove;
     private Vector3 voidVelocity;
     private List<GameObject> characters;
@@ -120,13 +122,20 @@ public class BotCollider : MonoBehaviour
 
     public void BotMove()
     {
-        StartCoroutine(BotSlide());
+        StartCoroutine(BotSlide(this.gameObject.GetComponent<BotCollider>()));
+        if (playerManager.sameMovements == true)
+        {
+            if (linkedBlock.obstacleTop == false)
+            {
+                StartCoroutine(BotSlide(linkedBlock));
+            }
+        }
     }
 
-    IEnumerator BotSlide()
+    IEnumerator BotSlide(BotCollider block)
     {
-        botMove = true;
+        block.botMove = true;
         yield return new WaitForSeconds(1.0f);
-        botMove = false;
+        block.botMove = false;
     }
 }

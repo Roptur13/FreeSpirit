@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 //Script de Samuel
 public class RightCollider : MonoBehaviour
@@ -18,6 +19,8 @@ public class RightCollider : MonoBehaviour
     private Vector3 voidVelocity;
 
     private List<GameObject> characters;
+
+    public RightCollider linkedBlock;
 
     void Start()
     {
@@ -40,7 +43,7 @@ public class RightCollider : MonoBehaviour
         obstacleLeft = leftCollider.obstacleLeft;
     }
 
-    // Update is called once per frame
+    
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (characters.Contains(collision.gameObject))
@@ -120,13 +123,23 @@ public class RightCollider : MonoBehaviour
 
     public void RightMove()
     {
-        StartCoroutine(RightSlide());
+        StartCoroutine(RightSlide(this.gameObject.GetComponent<RightCollider>()));
+        if (playerManager.sameMovements == true)
+        {
+            if (linkedBlock.obstacleLeft == false)
+            {
+                StartCoroutine(RightSlide(linkedBlock));
+            }
+        }
+              
     }
 
-    IEnumerator RightSlide()
+    IEnumerator RightSlide(RightCollider block)
     {
-        rightMove = true;
+        block.rightMove = true;
         yield return new WaitForSeconds(1.0f);
-        rightMove = false;
+        block.rightMove = false;
     }
 }
+
+

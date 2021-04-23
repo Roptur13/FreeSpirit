@@ -14,6 +14,8 @@ public class LeftCollider : MonoBehaviour
     public PlayerManager playerManager;
     public RepairMovableBlock repairMovable;
 
+    public LeftCollider linkedBlock;
+
     private bool leftMove;
     private Vector3 voidVelocity;
 
@@ -120,13 +122,20 @@ public class LeftCollider : MonoBehaviour
 
     public void LeftMove()
     {
-        StartCoroutine(LeftSlide());
+        StartCoroutine(LeftSlide(this.gameObject.GetComponent<LeftCollider>()));
+        if (playerManager.sameMovements == true)
+        {
+            if (linkedBlock.obstacleRight == false)
+            {
+                StartCoroutine(LeftSlide(linkedBlock));
+            }
+        }
     }
 
-    IEnumerator LeftSlide()
+    IEnumerator LeftSlide(LeftCollider block)
     {
-        leftMove = true;
+        block.leftMove = true;
         yield return new WaitForSeconds(1.0f);
-        leftMove = false;
+        block.leftMove = false;
     }
 }

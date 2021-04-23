@@ -14,6 +14,7 @@ public class TopCollider : MonoBehaviour
     public PlayerManager playerManager;
     public RepairMovableBlock repairMovable;
 
+    public TopCollider linkedBlock;
 
     private bool topMove;
     private Vector3 voidVelocity;
@@ -123,13 +124,20 @@ public class TopCollider : MonoBehaviour
 
     public void TopMove()
     {
-        StartCoroutine(TopSlide());
+        StartCoroutine(TopSlide(this.gameObject.GetComponent<TopCollider>()));
+        if (playerManager.sameMovements == true)
+        {
+            if (linkedBlock.obstacleBot == false)
+            {
+                StartCoroutine(TopSlide(linkedBlock));
+            }
+        }
     }
 
-    IEnumerator TopSlide()
+    IEnumerator TopSlide(TopCollider block)
     {
-        topMove = true;
+        block.topMove = true;
         yield return new WaitForSeconds(1.0f);
-        topMove = false;
+        block.topMove = false;
     }
 }
