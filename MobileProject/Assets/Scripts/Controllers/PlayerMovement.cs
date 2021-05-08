@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     public SwipeScript swipe;
 
-    private Animator animator;
+    //private Animator animator;
 
     public float animValueX;
     public float animValueY;
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         targetPosition = transform.position;
         isJumping = false;
-        animator = GetComponent<Animator>();        
+        //animator = GetComponent<Animator>();        
     }
     
     void Update()
@@ -49,8 +49,8 @@ public class PlayerMovement : MonoBehaviour
         if (isJumping == false)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-            animator.SetFloat("Move X", animValueX);
-            animator.SetFloat("Move Y", animValueY);
+            //animator.SetFloat("Move X", animValueX);
+            //animator.SetFloat("Move Y", animValueY);
         }
         
     }

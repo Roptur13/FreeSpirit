@@ -111,7 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7f67329d895c640965a1609dd1266e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 0, y: 0, z: 0}
   moveSpeed: 10
   canMove: 0
   isJumping: 0
@@ -119,6 +118,7 @@ MonoBehaviour:
   animValueX: 0
   animValueY: 0
   previousPosition: {x: 0, y: 0, z: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
 --- !u!95 &-2783024078401980275
 Animator:
   serializedVersion: 3
@@ -209,8 +209,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 299d6ae3a3394d44b82236c0807b3c63, type: 3}
-  m_Color: {r: 0.9803922, g: 0.85098046, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e5d13d627b1c31840a183d87420aae0c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
