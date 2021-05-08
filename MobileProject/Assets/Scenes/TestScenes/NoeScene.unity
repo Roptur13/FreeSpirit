@@ -1708,7 +1708,7 @@ PrefabInstance:
     - target: {fileID: 413343395015685018, guid: e5175ac82aca37c4b91f9af750a41499,
         type: 3}
       propertyPath: sameMovements
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 413343395015685019, guid: e5175ac82aca37c4b91f9af750a41499,
         type: 3}
