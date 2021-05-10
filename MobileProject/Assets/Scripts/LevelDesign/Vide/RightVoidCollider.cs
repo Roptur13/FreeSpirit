@@ -50,7 +50,6 @@ public class RightVoidCollider : MonoBehaviour
         {
             rightVoidButton.gameObject.SetActive(true);
         }
-        //Debug.Log(leftCollision);
     }
 
     // Update is called once per frame
@@ -75,19 +74,15 @@ public class RightVoidCollider : MonoBehaviour
             else
             {
                 rightButtonIsActivable = false;
-                Debug.Log("objet bloquant à gauche");
             }
-            Debug.Log("yellowChara");
         }
         else
         {
-            Debug.Log("1");
             if (collision.gameObject.CompareTag("Obstacle"))
             {
                 rightCollision = true;
 
                 rightButtonIsActivable = false;
-                Debug.Log(collision.gameObject);
             }            
         }
         
@@ -105,7 +100,6 @@ public class RightVoidCollider : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Obstacle"))
             {
-                Debug.Log("z");
                 rightCollision = false;
             }
             
@@ -115,7 +109,6 @@ public class RightVoidCollider : MonoBehaviour
 
     public void RightVoidMove()
     {
-        Debug.Log("bouton saut à gauche marche");
         StartCoroutine(rightGlide());
     }
 

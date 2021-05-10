@@ -74,13 +74,11 @@ public class LeftVoidCollider : MonoBehaviour
             else
             {
                 leftButtonIsActivable = false;
-                Debug.Log("objet bloquant à droite");
             }
             
         }
         else
         {
-            Debug.Log("2");
             if (collision.gameObject.CompareTag("Obstacle"))
             {
                 leftCollision = true;
@@ -111,7 +109,6 @@ public class LeftVoidCollider : MonoBehaviour
 
     public void LeftVoidMove()
     {
-        Debug.Log("le bouton marche");
         StartCoroutine(leftGlide());
     }
 

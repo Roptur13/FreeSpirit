@@ -76,7 +76,6 @@ public class BotVoidCollider : MonoBehaviour
         }
         else
         {
-            Debug.Log("4");
             if (collision.gameObject.CompareTag("Obstacle"))
             {
                 botCollision = true;
@@ -96,7 +95,6 @@ public class BotVoidCollider : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Obstacle"))
             {
-                Debug.Log("z");
                 botCollision = false;
             }
 
