@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScenes/Scene Albane/Solitude.unity
     guid: 4438bccc5a6cce348ab1feff70ddf555
+  - enabled: 1
+    path: "Assets/Scenes/TestScenes/Sc\xE8nes Samuel/LD Bipolaire.unity"
+    guid: 31d6a56b39155de4992d923ffbc7ee2a
   m_configObjects: {}
