@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [System.Serializable]
 public class CollidersArrays
@@ -11,7 +9,7 @@ public class CollidersArrays
 public class CameraMovement : MonoBehaviour
 {    
     
-    public Vector3[] cameraPositions; //doit avoir une valeur de plus (la première) que colliderCategories, sa valeur importe peu car elle sert à éviter les out of range
+    public Vector3[] cameraPositions; 
 
     public CollidersArrays[] colliderCategories;
 
@@ -40,7 +38,7 @@ public class CameraMovement : MonoBehaviour
 
             if (triggersActivated >= colliderCategories[i].colliders.Length)
             {
-                transform.position = Vector3.Lerp(transform.position, cameraPositions[i + 1], 0.1f);
+                transform.position = Vector3.Lerp(transform.position, cameraPositions[i], 0.1f);
                 triggersActivated = 0;
             }
             else
