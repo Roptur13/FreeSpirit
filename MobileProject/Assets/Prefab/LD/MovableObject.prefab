@@ -236,6 +236,7 @@ MonoBehaviour:
   botCollider: {fileID: 2519949417277533152}
   playerManager: {fileID: 0}
   repairMovable: {fileID: 8461690936898680769}
+  linkedBlock: {fileID: 0}
 --- !u!50 &4684032326502846173
 Rigidbody2D:
   serializedVersion: 4
@@ -335,6 +336,7 @@ MonoBehaviour:
   leftCollider: {fileID: 2519949417556785870}
   playerManager: {fileID: 0}
   repairMovable: {fileID: 8461690936898680769}
+  linkedBlock: {fileID: 0}
 --- !u!50 &1734647828053721147
 Rigidbody2D:
   serializedVersion: 4
@@ -1066,6 +1068,7 @@ MonoBehaviour:
   topCollider: {fileID: 2519949416766604255}
   playerManager: {fileID: 0}
   repairMovable: {fileID: 8461690936898680769}
+  linkedBlock: {fileID: 0}
 --- !u!50 &4805142254157109550
 Rigidbody2D:
   serializedVersion: 4
@@ -1243,6 +1246,7 @@ MonoBehaviour:
   rightCollider: {fileID: 2519949416785682213}
   playerManager: {fileID: 0}
   repairMovable: {fileID: 8461690936898680769}
+  linkedBlock: {fileID: 0}
 --- !u!50 &667463583750042628
 Rigidbody2D:
   serializedVersion: 4

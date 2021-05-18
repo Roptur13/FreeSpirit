@@ -74,19 +74,16 @@ public class TopVoidCollider : MonoBehaviour
             else
             {
                 topButtonIsActivable = false;
-                Debug.Log("objet bloquant en bas");
             }
            
         }
         else
         {
-            Debug.Log("3");
             if (collision.gameObject.CompareTag("Obstacle"))
             {
                 topCollision = true;
 
                 topButtonIsActivable = false;
-                Debug.Log(collision.gameObject);
             }
         }
     }
@@ -102,7 +99,6 @@ public class TopVoidCollider : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Obstacle"))
             {
-                
                 topCollision = false;
             }
 
