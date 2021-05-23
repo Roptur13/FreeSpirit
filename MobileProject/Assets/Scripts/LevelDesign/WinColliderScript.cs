@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+//Script de Noé
+
 public class WinColliderScript : MonoBehaviour
 {
     public GameObject winScreen;
 
     public int charactersNumber;
 
+    [SerializeField]
     private int charactersArrived;
 
     public Button hubButton;
+
+    public GameObject musicManager;
 
     void Start()
     {
@@ -21,7 +26,10 @@ public class WinColliderScript : MonoBehaviour
     {
         if (charactersArrived == charactersNumber)
         {
+            transform.position = new Vector3(0, 0, 19); // déplace le collider car le son de victoire se joue qu'à la sortie (je sais pas pourquoi)
             winScreen.SetActive(true);
+            musicManager.GetComponent<AudioSource>().Stop();
+            GetComponent<AudioSource>().Play();
             hubButton.gameObject.SetActive(true);
         }        
     }
