@@ -138,6 +138,21 @@ PrefabInstance:
       propertyPath: playerManager
       value: 
       objectReference: {fileID: 1378277923}
+    - target: {fileID: 922990593996337318, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: red
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 922990593996337318, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: yellow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 922990593996337318, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: blue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 922990593996337319, guid: dd2e0aee4aef7c643887055c5d9fd78a,
         type: 3}
       propertyPath: m_BodyType
@@ -151,6 +166,11 @@ PrefabInstance:
     - target: {fileID: 922990593996337319, guid: dd2e0aee4aef7c643887055c5d9fd78a,
         type: 3}
       propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 922990593996337319, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 922990593996337321, guid: dd2e0aee4aef7c643887055c5d9fd78a,
@@ -212,6 +232,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BluePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 922990593996337323, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.35700718
+      objectReference: {fileID: 0}
+    - target: {fileID: 922990593996337323, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.4726296
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685384273997254655, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685384273997254655, guid: dd2e0aee4aef7c643887055c5d9fd78a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd2e0aee4aef7c643887055c5d9fd78a, type: 3}
