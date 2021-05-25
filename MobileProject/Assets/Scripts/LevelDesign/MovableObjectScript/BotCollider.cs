@@ -69,10 +69,13 @@ public class BotCollider : MonoBehaviour
                     {
                         repairMovable.repairButton.gameObject.SetActive(false);
                     }
+
+                    botButton.gameObject.SetActive(false);
                 }
                 else
                 {
                     repairMovable.repairButton.gameObject.SetActive(false);
+                    botButton.gameObject.SetActive(true);
                 }
             }
             else

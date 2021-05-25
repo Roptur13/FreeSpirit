@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class DestructibleWall : MonoBehaviour
 {
     public GameObject player;
+
     public Button destroyButton;
     public PlayerManager playerManager;
 
@@ -26,6 +27,7 @@ public class DestructibleWall : MonoBehaviour
         if(distance<=1.8f && player == playerManager.currentCharacter)
         {
             destroyButton.gameObject.SetActive(true);
+            Debug.Log("proche");
         }
         else
         {
@@ -34,7 +36,7 @@ public class DestructibleWall : MonoBehaviour
     }
 
     public void BlockDestroy(Collider2D collider)
-    {
+    {             
         Destroy(destroyButton.gameObject);
         Destroy(gameObject);     
     }
