@@ -1,50 +1,48 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [System.Serializable]
-public class CollidersArrays
+public class CameraPossibleSettings
 {   
-    public CameraPositionTrigger[] colliders;
+    public Vector3 camPossiblePosition;
+    public float camPossibleSize;
 }
 
 public class CameraMovement : MonoBehaviour
-{    
-    
-    public Vector3[] cameraPositions; 
+{
 
-    public CollidersArrays[] colliderCategories;
+    public Vector3[] cameraPositions;
 
-    [SerializeField]
-    private int triggersActivated;
+    public CameraPossibleSettings[] camSettings;
 
-       
+    Camera mainCam;
+
+    private int index;
+
+
     void Start()
     {
-        triggersActivated = 0;           
+        mainCam = GetComponent<Camera>();
     }
 
-    
-    void Update()
+    public void MoveCamera(int arrayChosenIndex)
     {
-        for (int i = 0; i < colliderCategories.Length; i++)
+        index = arrayChosenIndex;
+        StartCoroutine(Move());
+    }
+
+    public IEnumerator Move()
+    {
+        float progress = 0.0f;
+        float animspeed = 0.5f;
+
+        while (progress <1.0f)
         {
-            for (int j = 0; j < colliderCategories[i].colliders.Length; j++)
-            {               
+            transform.position = Vector3.Lerp(transform.position, camSettings[index].camPossiblePosition, 0.1f);
+            mainCam.orthographicSize = Mathf.Lerp(mainCam.orthographicSize, camSettings[index].camPossibleSize, 0.1f);
 
-                if (colliderCategories[i].colliders[j].activated == true)
-                {
-                    triggersActivated = triggersActivated + 1;
-                }                
-            }
-
-            if (triggersActivated >= colliderCategories[i].colliders.Length)
-            {
-                transform.position = Vector3.Lerp(transform.position, cameraPositions[i], 0.1f);
-                triggersActivated = 0;
-            }
-            else
-            {
-                triggersActivated = 0;
-            }
-        }
+            yield return new WaitForEndOfFrame();
+            progress += Time.deltaTime * animspeed;
+        }        
     }
 }
