@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 //Script de Noé
@@ -16,10 +19,19 @@ public class WinColliderScript : MonoBehaviour
 
     public GameObject musicManager;
 
+    public Volume volume;
+    private Vignette vg;
+
+    private bool postProcessFinished;
+
     void Start()
     {
         winScreen.SetActive(false);
         hubButton.gameObject.SetActive(false);
+
+        volume.profile.TryGet(out vg);
+
+        postProcessFinished = false;
     }
 
     void Update()
@@ -27,7 +39,10 @@ public class WinColliderScript : MonoBehaviour
         if (charactersArrived == charactersNumber)
         {
             transform.position = new Vector3(0, 0, 19); // déplace le collider car le son de victoire se joue qu'à la sortie (je sais pas pourquoi)
-            winScreen.SetActive(true);
+            if (postProcessFinished == false)
+            {
+                StartCoroutine(RemovePostProcess());
+            }            
             musicManager.GetComponent<AudioSource>().Stop();
             GetComponent<AudioSource>().Play();
             hubButton.gameObject.SetActive(true);
@@ -54,5 +69,21 @@ public class WinColliderScript : MonoBehaviour
     {
         SaveSystem.SaveFinishedLevel();
         Debug.Log(PlayerPrefs.GetInt("Last Level Finished"));
+    }
+
+    private IEnumerator RemovePostProcess()
+    {
+        float progress = 0.0f;
+        float animspeed = 0.5f;
+
+        while (progress < 1.0f)
+        {
+            vg.intensity.value = Mathf.Lerp(vg.intensity.value, 0, 0.1f);
+
+            yield return new WaitForEndOfFrame();
+            progress += Time.deltaTime * animspeed;
+        }
+
+        postProcessFinished = true;
     }
 }
