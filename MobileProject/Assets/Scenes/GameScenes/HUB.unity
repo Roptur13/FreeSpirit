@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1268,7 +1268,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1060598060}
+      - m_Target: {fileID: 1076339843}
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -1341,7 +1341,7 @@ GameObject:
   - component: {fileID: 1076339844}
   - component: {fileID: 1076339843}
   m_Layer: 0
-  m_Name: SceneManager (2)
+  m_Name: SceneManagerLv3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1359,8 +1359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e82725563f684354081ae59789cc8a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: {fileID: 0}
-  sceneToLoad: 
+  scene: {fileID: 102900000, guid: 6afb8e329c58c414583a11a2c3a2254d, type: 3}
+  sceneToLoad: LD Empathie
 --- !u!4 &1076339844
 Transform:
   m_ObjectHideFlags: 0
