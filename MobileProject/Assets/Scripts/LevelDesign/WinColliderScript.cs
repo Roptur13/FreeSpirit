@@ -29,7 +29,10 @@ public class WinColliderScript : MonoBehaviour
         winScreen.SetActive(false);
         hubButton.gameObject.SetActive(false);
 
-        volume.profile.TryGet(out vg);
+        if (volume != null)
+        {
+            volume.profile.TryGet(out vg);
+        }       
 
         postProcessFinished = false;
     }
@@ -39,7 +42,7 @@ public class WinColliderScript : MonoBehaviour
         if (charactersArrived == charactersNumber)
         {
             transform.position = new Vector3(0, 0, 19); // déplace le collider car le son de victoire se joue qu'à la sortie (je sais pas pourquoi)
-            if (postProcessFinished == false)
+            if (postProcessFinished == false && volume != null)
             {
                 StartCoroutine(RemovePostProcess());
             }            

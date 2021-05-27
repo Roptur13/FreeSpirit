@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   destroyButton: {fileID: 0}
+  playerManager: {fileID: 0}
   distance: 0
 --- !u!61 &775533508045601627
 BoxCollider2D:

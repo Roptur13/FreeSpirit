@@ -17,6 +17,11 @@ public class DoubleSwitch : MonoBehaviour
     public Sprite onSprite;
     public Sprite offSprite;
 
+    private AudioSource audioSource;
+
+    public AudioClip doorOpen;
+    public AudioClip switchSound;
+
     void Start()
     {
         isActivated = false;
@@ -24,14 +29,17 @@ public class DoubleSwitch : MonoBehaviour
         finish = false;
 
         spriteRender = GetComponent<SpriteRenderer>();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     
     void Update()
     {
-        if (isActivated == true && linkedSwitch.isActivated == true)
+        if (isActivated == true && linkedSwitch.isActivated == true && finish == false)
         {
             objectToActive.SetActive(false);
+            audioSource.PlayOneShot(doorOpen);
             finish = true;
         }
 
@@ -48,6 +56,7 @@ public class DoubleSwitch : MonoBehaviour
         {
             isActivated = true;
             spriteRender.material.color = Color.green;
+            audioSource.PlayOneShot(switchSound);
             //spriteRender.sprite = onSprite;
         }        
     }

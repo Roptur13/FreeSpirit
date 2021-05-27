@@ -17,6 +17,7 @@ public class DestructibleWall : MonoBehaviour
     void Start()
     {
         destroyButton.gameObject.SetActive(false);
+        
     }
 
     
@@ -27,7 +28,6 @@ public class DestructibleWall : MonoBehaviour
         if(distance<=1.8f && player == playerManager.currentCharacter)
         {
             destroyButton.gameObject.SetActive(true);
-            Debug.Log("proche");
         }
         else
         {
@@ -36,7 +36,7 @@ public class DestructibleWall : MonoBehaviour
     }
 
     public void BlockDestroy(Collider2D collider)
-    {             
+    {
         Destroy(destroyButton.gameObject);
         Destroy(gameObject);     
     }

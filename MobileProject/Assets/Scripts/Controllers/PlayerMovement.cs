@@ -24,11 +24,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     public Vector3 targetPosition;
 
+    private AudioSource audioSource;
+
     void Start()
     {
         targetPosition = transform.position;
         isJumping = false;
-        //animator = GetComponent<Animator>();        
+        //animator = GetComponent<Animator>();   
+        audioSource = GetComponent<AudioSource>();
     }
     
     void Update()
@@ -65,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        audioSource.Play();
         targetPosition = previousPosition;
         animValueX = -animValueX;
         animValueY = -animValueY;
