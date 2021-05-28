@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repairButton: {fileID: 0}
-  brokenSprite: {fileID: 21300000, guid: c9e9a9288d0ae4bfda128e23cf8d252c, type: 3}
-  fixedSprite: {fileID: 21300000, guid: 7db9ef73147064968bb6e49c4cdfda22, type: 3}
+  brokenSprite: {fileID: 21300000, guid: 31d27f8056c53034fa2c0a031a3bc0d3, type: 3}
+  fixedSprite: {fileID: 21300000, guid: 1ad02f24783032444a3653dab3c74fa1, type: 3}
   topTrigger: {fileID: 6721952321587486160}
   bottomTrigger: {fileID: 6721952321695227388}
   leftTrigger: {fileID: 6721952322924782172}

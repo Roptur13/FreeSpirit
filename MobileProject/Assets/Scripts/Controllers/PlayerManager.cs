@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject currentCharacter;
 
     public bool sameMovements;
+    public bool menuIsActive;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class PlayerManager : MonoBehaviour
         }
 
         currentCharacter = characters[0];
+        menuIsActive = false;
     }
 
     public void ChangeCharacter(GameObject player)
@@ -33,5 +35,30 @@ public class PlayerManager : MonoBehaviour
         }
         currentCharacter = player;
         
+    }
+
+    public void StopCharacter(PlayerManager playerManager)
+    {
+        bool canMove = playerManager.currentCharacter.GetComponent<PlayerMovement>().canMove;
+        if (menuIsActive == false)
+        {
+            menuIsActive = true;
+        }
+        else
+        {
+            menuIsActive = false;
+            Debug.Log("machin");
+        }
+        
+
+
+        if (canMove == true)
+        {
+            canMove = false;            
+        }
+        if (canMove == false)
+        {
+            canMove = true;            
+        }
     }
 }

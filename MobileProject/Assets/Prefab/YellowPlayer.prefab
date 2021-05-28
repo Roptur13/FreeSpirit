@@ -120,6 +120,7 @@ MonoBehaviour:
   swipe: {fileID: 0}
   animValueX: 0
   animValueY: 0
+  playerManager: {fileID: 0}
   previousPosition: {x: 0, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
 --- !u!95 &-2783024078401980275
@@ -307,7 +308,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: e5d13d627b1c31840a183d87420aae0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -401,7 +402,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0349cec4511a9d548907d8c96f6ed5c8, type: 3}
   m_Color: {r: 0.13573885, g: 1, b: 0, a: 1}
   m_FlipX: 0

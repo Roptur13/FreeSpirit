@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public float animValueX;
     public float animValueY;
 
+    public PlayerManager playerManager;
+
     [SerializeField]
     public Vector3 previousPosition;
 
@@ -38,7 +40,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (targetPosition == transform.position)
         {
-            canMove = true;
+            if (playerManager.menuIsActive == false)
+            {
+                canMove = true;
+            }
+            else
+            {
+                canMove = false;
+            }
+            
             previousPosition = transform.position;
 
             animValueX = 0f;
