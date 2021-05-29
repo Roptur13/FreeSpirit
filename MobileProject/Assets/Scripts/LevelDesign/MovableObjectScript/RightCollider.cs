@@ -77,7 +77,7 @@ public class RightCollider : MonoBehaviour
                 else
                 {
                     repairMovable.repairButton.gameObject.SetActive(false);
-                    rightButton.gameObject.SetActive(true);
+                    //rightButton.gameObject.SetActive(true);
                 }
             }
             else
