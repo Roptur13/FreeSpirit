@@ -4,17 +4,26 @@ using UnityEngine.UI;
 
 // Script de Noé
 
+[System.Serializable]
+public class ButtonManager
+{
+    public Button levelButton;
+    public Sprite beforeSprite;
+    public Sprite afterSprite;
+}
+
+
 public class LevelsScript : MonoBehaviour
 {
-    public List<Button> levels = new List<Button>();
+    public List<ButtonManager> levels;
 
     private void Awake()
     {
-        levels[0].gameObject.SetActive(true);
+        levels[0].levelButton.gameObject.SetActive(true);
 
         for (int i = 1; i < levels.Count; i++)
         {
-            levels[i].gameObject.SetActive(false);
+            levels[i].levelButton.gameObject.SetActive(false);
         }
 
         SaveSystem.CheckMaxLevel();
@@ -25,18 +34,18 @@ public class LevelsScript : MonoBehaviour
         Debug.Log(PlayerPrefs.GetInt("Max Level"));
         for (int i = 0; i < PlayerPrefs.GetInt("Max Level") + 1; i++)
         {
-            levels[i].gameObject.SetActive(true);
-            Debug.Log(levels[i].gameObject);
+            levels[i].levelButton.gameObject.SetActive(true);
+            //Debug.Log(levels[i].gameObject);
             if (i < PlayerPrefs.GetInt("Max Level") - 1)
             {
-                //levels[i].GetComponent<Image>().sprite = nouvSprite //(ou quelque chose comme ça avec un shader)
+                levels[i].levelButton.gameObject.GetComponent<Image>().sprite = levels[i].afterSprite;
             }
         }
 
         if (SaveSystem.newLevel == true)
         {
-            levels[PlayerPrefs.GetInt("Max Level")].gameObject.SetActive(true);            
-            //levels[PlayerPrefs.GetInt("Max Level")].GetComponent<Image>().sprite = nouvSprite //(ou quelque chose comme ça avec un shader et une coroutine)
+            levels[PlayerPrefs.GetInt("Max Level")].levelButton.gameObject.SetActive(true);
+            levels[PlayerPrefs.GetInt("Max Level")].levelButton.gameObject.GetComponent<Image>().sprite = levels[PlayerPrefs.GetInt("Max Level")].beforeSprite; ;
         }
     }
     
