@@ -1524,8 +1524,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 299d6ae3a3394d44b82236c0807b3c63, type: 3}
-  m_Color: {r: 0.023529412, g: 0.5019608, b: 0.05490196, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7603b15c94ce2c44885e93db10bffb0b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1838,12 +1838,14 @@ PrefabInstance:
         type: 3}
       propertyPath: brokenSprite
       value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 21300000, guid: 1dd6469f05b56674ba7e13708a40646a,
+        type: 3}
     - target: {fileID: 5395669720260673023, guid: e16bca653e3ce4e42a829ad6f4de9b83,
         type: 3}
       propertyPath: fixedSprite
       value: 
-      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 21300000, guid: 7603b15c94ce2c44885e93db10bffb0b,
+        type: 3}
     - target: {fileID: 5395669720260673023, guid: e16bca653e3ce4e42a829ad6f4de9b83,
         type: 3}
       propertyPath: repairButton

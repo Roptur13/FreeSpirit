@@ -12,8 +12,6 @@ public class DoubleSwitch : MonoBehaviour
 
     private bool finish;
 
-    private SpriteRenderer spriteRender;
-
     public Sprite onSprite;
     public Sprite offSprite;
 
@@ -28,8 +26,6 @@ public class DoubleSwitch : MonoBehaviour
 
         finish = false;
 
-        spriteRender = GetComponent<SpriteRenderer>();
-
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -42,12 +38,6 @@ public class DoubleSwitch : MonoBehaviour
             audioSource.PlayOneShot(doorOpen);
             finish = true;
         }
-
-        if (finish == false && isActivated == false)
-        {
-            spriteRender.material.color = Color.red;
-            //spriteRender.sprite = offSprite;
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -55,9 +45,7 @@ public class DoubleSwitch : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             isActivated = true;
-            spriteRender.material.color = Color.green;
             audioSource.PlayOneShot(switchSound);
-            //spriteRender.sprite = onSprite;
         }        
     }
 
