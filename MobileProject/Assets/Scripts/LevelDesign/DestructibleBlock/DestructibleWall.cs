@@ -25,7 +25,7 @@ public class DestructibleWall : MonoBehaviour
     {
         distance = Vector3.Distance(player.transform.position, transform.position);
         
-        if(distance<=1f && player == playerManager.currentCharacter)
+        if(distance<=1.1f && player == playerManager.currentCharacter)
         {
             destroyButton.gameObject.SetActive(true);
         }

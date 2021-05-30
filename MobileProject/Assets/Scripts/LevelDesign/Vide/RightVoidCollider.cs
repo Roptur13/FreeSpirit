@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,7 +46,7 @@ public class RightVoidCollider : MonoBehaviour
             rightVoidButton.gameObject.SetActive(false);
         }
 
-        if (rightButtonIsActivable == true)
+        if (rightButtonIsActivable == true && player.GetComponent<PlayerMovement>().isJumping == false)
         {
             rightVoidButton.gameObject.SetActive(true);
         }

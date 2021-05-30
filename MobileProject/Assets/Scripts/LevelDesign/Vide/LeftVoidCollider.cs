@@ -46,7 +46,7 @@ public class LeftVoidCollider : MonoBehaviour
             leftVoidButton.gameObject.SetActive(false);
         }
 
-        if (leftButtonIsActivable == true)
+        if (leftButtonIsActivable == true && player.GetComponent<PlayerMovement>().isJumping == false)
         {
             leftVoidButton.gameObject.SetActive(true);
         }

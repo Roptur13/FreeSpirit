@@ -861,7 +861,7 @@ PrefabInstance:
     - target: {fileID: 2168245244994560709, guid: dd2e0aee4aef7c643887055c5d9fd78a,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd2e0aee4aef7c643887055c5d9fd78a, type: 3}
@@ -6243,8 +6243,8 @@ Tilemap:
   - first: {x: -6, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7259,18 +7259,18 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 6f9e2aa0c62de45da82514dbe726e22f, type: 2}
-  - m_RefCount: 167
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 168
     m_Data: {fileID: 11400000, guid: c7e4a354131bf3e4388148dc5d9579e8, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 53f9314c9b43da2458f009e8f1e1c083, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 72a5f0474ba14b84a9d180391624df97, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: fb2d37aebc0814df38c85454f4b23d99, type: 3}
-  - m_RefCount: 167
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 168
     m_Data: {fileID: 21300000, guid: 1ad02f24783032444a3653dab3c74fa1, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: f0c781abc9f1cdd46b6f377b5244c737, type: 3}
@@ -13916,12 +13916,12 @@ PrefabInstance:
     - target: {fileID: 8401649043429140478, guid: 4e57397de67d2bf4bb86a264b6f4340f,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8456481862821027024, guid: 4e57397de67d2bf4bb86a264b6f4340f,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e57397de67d2bf4bb86a264b6f4340f, type: 3}

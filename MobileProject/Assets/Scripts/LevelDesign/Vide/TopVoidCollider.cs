@@ -1,7 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 //script de Samuel
@@ -47,7 +45,7 @@ public class TopVoidCollider : MonoBehaviour
             topVoidButton.gameObject.SetActive(false);
         }
 
-        if (topButtonIsActivable == true)
+        if (topButtonIsActivable == true && player.GetComponent<PlayerMovement>().isJumping == false)
         {
             topVoidButton.gameObject.SetActive(true);
         }

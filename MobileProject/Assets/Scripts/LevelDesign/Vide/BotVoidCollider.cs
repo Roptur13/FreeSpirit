@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,7 +46,7 @@ public class BotVoidCollider : MonoBehaviour
             botVoidButton.gameObject.SetActive(false);
         }
 
-        if (botButtonIsActivable == true)
+        if (botButtonIsActivable == true && player.GetComponent<PlayerMovement>().isJumping == false)
         {
             botVoidButton.gameObject.SetActive(true);
         }

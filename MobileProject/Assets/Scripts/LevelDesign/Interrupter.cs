@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Interrupter : MonoBehaviour
 {
@@ -11,8 +9,6 @@ public class Interrupter : MonoBehaviour
     private bool isOpen;
 
     private Renderer render;
-
-    private Color m_oldColor = Color.white;
 
     private AudioSource audioSource;
 
@@ -30,8 +26,6 @@ public class Interrupter : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            m_oldColor = render.material.color;
-            //render.material.color = Color.green;
             audioSource.PlayOneShot(switchSound);
 
             if (isOpen == false)
@@ -50,7 +44,6 @@ public class Interrupter : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            //render.material.color = m_oldColor;
 
             if (simplePush == false)
             {
