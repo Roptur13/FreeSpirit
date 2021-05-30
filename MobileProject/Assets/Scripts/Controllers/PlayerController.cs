@@ -16,19 +16,21 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (this.gameObject == playerManager.currentCharacter)
+        /*if (this.gameObject == playerManager.currentCharacter)
         {
             highLight.SetActive(true);
         }
         else
         {
             highLight.SetActive(false);
-        }
+        }*/
     }
 
     private void OnMouseDown()
     {
+        playerManager.currentCharacter.GetComponent<PlayerController>().highLight.SetActive(false);
         playerManager.ChangeCharacter(this.gameObject);
         GetComponent<PlayerMovement>().enabled = true;
+        highLight.SetActive(true);
     }
 }

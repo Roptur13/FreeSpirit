@@ -24,6 +24,10 @@ public class WinColliderScript : MonoBehaviour
 
     private bool postProcessFinished;
 
+    public PlayerManager playerManager;
+
+    public GameObject menu;
+
     void Start()
     {
         winScreen.SetActive(false);
@@ -45,6 +49,8 @@ public class WinColliderScript : MonoBehaviour
             if (postProcessFinished == false && volume != null)
             {
                 StartCoroutine(RemovePostProcess());
+                playerManager.StopCharacter(playerManager);
+                menu.SetActive(false);
             }            
             musicManager.GetComponent<AudioSource>().Stop();
             GetComponent<AudioSource>().Play();

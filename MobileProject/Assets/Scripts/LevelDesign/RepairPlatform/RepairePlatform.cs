@@ -29,7 +29,6 @@ public class RepairePlatform : MonoBehaviour
     private int currentSwipeCount;
 
     public int swipeBeforeDestroy = 3;
-
     
     public GameObject playerDetect;
     public bool playerOnPlatform;

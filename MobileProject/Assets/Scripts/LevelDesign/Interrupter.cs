@@ -31,7 +31,7 @@ public class Interrupter : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             m_oldColor = render.material.color;
-            render.material.color = Color.green;
+            //render.material.color = Color.green;
             audioSource.PlayOneShot(switchSound);
 
             if (isOpen == false)
@@ -50,7 +50,7 @@ public class Interrupter : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            render.material.color = m_oldColor;
+            //render.material.color = m_oldColor;
 
             if (simplePush == false)
             {
