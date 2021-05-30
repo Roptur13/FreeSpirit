@@ -16,7 +16,7 @@ public class SaveSystem
     public static void SaveMaxLevel()
     {
         PlayerPrefs.SetInt("Previous Max Level", PlayerPrefs.GetInt("Max Level"));
-        PlayerPrefs.SetInt("Max Level", PlayerPrefs.GetInt("Last Level Finished"));
+        PlayerPrefs.SetInt("Max Level", PlayerPrefs.GetInt("Last Level Finished") - 1);
         PlayerPrefs.Save();
     }
 

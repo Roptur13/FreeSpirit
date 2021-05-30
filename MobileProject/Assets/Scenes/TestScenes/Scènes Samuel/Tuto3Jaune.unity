@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1502,6 +1502,16 @@ PrefabInstance:
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 111551067}
+    - target: {fileID: 4112802116655991655, guid: 9ab99ebbc0671c64989c609e48850eb9,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.17608821
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112802116655991655, guid: 9ab99ebbc0671c64989c609e48850eb9,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.12782358
+      objectReference: {fileID: 0}
     - target: {fileID: 4112802116666330609, guid: 9ab99ebbc0671c64989c609e48850eb9,
         type: 3}
       propertyPath: m_Layer
@@ -1717,6 +1727,16 @@ PrefabInstance:
       propertyPath: playerManager
       value: 
       objectReference: {fileID: 1265985302}
+    - target: {fileID: 4112802117445188796, guid: 9ab99ebbc0671c64989c609e48850eb9,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.17782104
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112802117445188796, guid: 9ab99ebbc0671c64989c609e48850eb9,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.12435795
+      objectReference: {fileID: 0}
     - target: {fileID: 4112802117507460412, guid: 9ab99ebbc0671c64989c609e48850eb9,
         type: 3}
       propertyPath: m_Layer
@@ -1930,6 +1950,16 @@ PrefabInstance:
       propertyPath: playerManager
       value: 
       objectReference: {fileID: 1265985302}
+    - target: {fileID: 4112802118095920987, guid: 9ab99ebbc0671c64989c609e48850eb9,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.17611068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112802118095920987, guid: 9ab99ebbc0671c64989c609e48850eb9,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.12777863
+      objectReference: {fileID: 0}
     - target: {fileID: 4112802118106444926, guid: 9ab99ebbc0671c64989c609e48850eb9,
         type: 3}
       propertyPath: m_Layer
@@ -1975,6 +2005,16 @@ PrefabInstance:
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 111551067}
+    - target: {fileID: 4112802118326774093, guid: 9ab99ebbc0671c64989c609e48850eb9,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.17519912
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112802118326774093, guid: 9ab99ebbc0671c64989c609e48850eb9,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.12960178
+      objectReference: {fileID: 0}
     - target: {fileID: 4112802118508544837, guid: 9ab99ebbc0671c64989c609e48850eb9,
         type: 3}
       propertyPath: m_Offset.y
@@ -4085,6 +4125,11 @@ PrefabInstance:
     - target: {fileID: 2519949418083805706, guid: 9952f2ee2f4e28a41af578314610d012,
         type: 3}
       propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519949418083805706, guid: 9952f2ee2f4e28a41af578314610d012,
+        type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2519949418083805707, guid: 9952f2ee2f4e28a41af578314610d012,

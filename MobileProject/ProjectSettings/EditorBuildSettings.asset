@@ -11,13 +11,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScenes/HUB.unity
     guid: 98c67c61a0e0bbc49a63c73205953be6
-  - enabled: 0
-    path: Assets/Scenes/TestScenes/Scene Albane/LDAlbane.unity
-    guid: 886851fbd840858499d7bbe4a1cf701e
+  - enabled: 1
+    path: "Assets/Scenes/TestScenes/Sc\xE8nes Samuel/Tuto1Blue.unity"
+    guid: 3bccd7b47381fb945b19cc1c7d26fed9
+  - enabled: 1
+    path: "Assets/Scenes/TestScenes/Sc\xE8nes Samuel/Tuto2Red.unity"
+    guid: ffb3fd40c9ea8de4f86ea9c12c60b063
+  - enabled: 1
+    path: "Assets/Scenes/TestScenes/Sc\xE8nes Samuel/Tuto3Jaune.unity"
+    guid: b208ceda7468b0d469909f01348a9598
   - enabled: 1
     path: Assets/Scenes/TestScenes/Scene Albane/Solitude.unity
     guid: 4438bccc5a6cce348ab1feff70ddf555
   - enabled: 1
     path: "Assets/Scenes/TestScenes/Sc\xE8nes Samuel/LD Bipolaire.unity"
     guid: 31d6a56b39155de4992d923ffbc7ee2a
+  - enabled: 1
+    path: "Assets/Scenes/TestScenes/Sc\xE8ne No\xE9/LD Empathie.unity"
+    guid: 6afb8e329c58c414583a11a2c3a2254d
   m_configObjects: {}
