@@ -78,7 +78,7 @@ public class TopCollider : MonoBehaviour
                 else
                 {
                     repairMovable.repairButton.gameObject.SetActive(false);
-                    upButton.gameObject.SetActive(true);
+                    //upButton.gameObject.SetActive(true);
                 }
             }
             else

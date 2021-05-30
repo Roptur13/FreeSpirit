@@ -54,7 +54,7 @@ public class BotCollider : MonoBehaviour
                 {
                     botButton.gameObject.SetActive(true);
                 }
-                else
+                else 
                 {
                     botButton.gameObject.SetActive(false);
                 }
@@ -75,7 +75,7 @@ public class BotCollider : MonoBehaviour
                 else
                 {
                     repairMovable.repairButton.gameObject.SetActive(false);
-                    botButton.gameObject.SetActive(true);
+                    //botButton.gameObject.SetActive(true);
                 }
             }
             else
